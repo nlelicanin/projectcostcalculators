@@ -1,0 +1,877 @@
+/* ===============================
+   Base & Reset
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* ===============================
+   Layout
+================================ */
+
+.container {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Reduce space between header and main content */
+main.container {
+  margin-top: 20px;
+}
+
+/* ===============================
+   Header (Ad-safe)
+================================ */
+
+.site-header {
+  background: transparent;
+  border-bottom: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+/* Reserved space for future ads */
+.header-ad-slot {
+  min-height: 0;         /* No ad yet */
+  width: 100%;
+}
+
+/* Header inner */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.header-nav a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Logo */
+.site-header img {
+  height: 38px;
+  width: auto;
+  margin-right: 6px;
+}
+
+.site-nav a {
+  font-weight: 500;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+   opacity: 1;
+}
+
+.site-nav {
+  margin-left: auto;
+}
+
+.site-nav a {
+  margin-left: 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* ===============================
+   Header spacing fix
+================================ */
+
+.site-header .container {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header-nav a[href="/employee-vs-contractor-guide"] {
+  font-weight: 600;
+}
+
+/* ===============================
+   Typography
+================================ */
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #1a73e8;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #1a73e8;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.hint {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+  font-style: italic;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* ===============================
+   Forms & Inputs
+================================ */
+
+label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+/* ===============================
+   Select (Dropdowns)
+================================ */
+
+select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 40px 12px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  /* Remove default OS styling */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Custom dropdown arrow */
+  background-image:
+    linear-gradient(45deg, transparent 50%, #555 50%),
+    linear-gradient(135deg, #555 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) calc(50% - 3px),
+    calc(100% - 16px) calc(50% - 3px);
+  background-size:
+    6px 6px,
+    6px 6px;
+  background-repeat: no-repeat;
+}
+
+select:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+/* Disabled state */
+select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Ensure label spacing consistency */
+label select {
+  margin-top: 6px;
+}
+
+/* ===============================
+   Hub & Cross-Navigation Links
+================================ */
+
+.hub-link {
+  margin: 18px 0 28px;
+  font-size: 0.95rem;
+  color: #555;
+  text-align: center;
+}
+
+.hub-link a {
+  font-weight: 600;
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.hub-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   Results Box
+================================ */
+
+.result {
+  margin-top: 25px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  font-size: 1.05rem;
+}
+
+.result p {
+  margin: 8px 0;
+}
+
+/* ===============================
+   Tool List (Homepage)
+================================ */
+
+.tools {
+  margin-top: 40px;
+}
+
+.tool-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tool-list li {
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.tool-list a {
+  display: block;
+  padding: 16px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.tool-list a:hover {
+  background: #f1f5ff;
+}
+
+/* ===============================
+   Footer
+================================ */
+
+.site-footer {
+  background: transparent;
+  border-top: none;
+  margin-top: 40px;
+}
+
+.site-footer .container {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-links {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.footer-links a {
+  color: #777;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: #999;
+  margin: 0;
+}
+
+/* ===============================
+   Mobile
+================================ */
+
+@media (max-width: 400px) {
+  .container {
+    margin: 25px auto;
+    padding: 0 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===============================
+   Mobile Header
+================================ */
+
+@media (max-width: 480px) {
+
+  .header-inner {
+    padding: 6px 0;
+  }
+
+  .site-header img {
+    height: 32px;
+  }
+}
+
+/* =========================
+   Tool list grouping labels
+   ========================= */
+
+.tool-group {
+  list-style: none;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+}
+
+.tool-group + li {
+  margin-top: 0.25rem;
+}
+
+.related-calculators {
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.related-calculators a {
+  font-weight: 500;
+}
+
+/* ===============================
+   Homepage Enhancements
+   =============================== */
+
+/* Hero section */
+.hero {
+  margin-bottom: 35px;
+}
+
+.hero h1 {
+  margin-bottom: 12px;
+}
+
+.hero .intro {
+  font-size: 1.05rem;
+}
+
+/* ===============================
+   Category Hub
+   =============================== */
+
+.categories {
+  margin-top: 40px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.category-card {
+  display: block;
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.category-card:hover {
+  background: #f1f5ff;
+}
+
+.category-card h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.category-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ===============================
+   Popular Tools
+   =============================== */
+
+.popular-tools {
+  margin-top: 45px;
+}
+
+/* Reuse existing tool-list styles */
+.popular-tools .tool-list li {
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   Authority Content
+   =============================== */
+
+.authority {
+  margin-top: 45px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.authority p {
+  margin-bottom: 12px;
+}
+
+.authority a {
+  font-weight: 500;
+}
+
+/* ===============================
+   FAQ Section
+   =============================== */
+
+.faq {
+  margin-top: 45px;
+}
+
+.faq h3 {
+  margin-top: 22px;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+.faq p {
+  margin-top: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===============================
+   Comparison Tables (SEO)
+================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.95rem;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+thead {
+  background: #f1f5ff;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  color: #1a73e8;
+}
+
+tbody tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr strong {
+  color: #111;
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===============================
+   Tooltip (calculator hints)
+================================ */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 4px;
+  cursor: help;
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+.tooltip:hover {
+  opacity: 1;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: 125%;
+  transform: translateX(-50%);
+  min-width: 220px;
+  max-width: 280px;
+  padding: 8px 10px;
+  background: #111;
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  border-radius: 6px;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 10;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 115%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #111 transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.tooltip:hover::after,
+.tooltip:hover::before {
+  opacity: 1;
+}
+
+/* ===============================
+   Primary Tool Highlight Box
+   =============================== */
+
+.primary-tool {
+  margin: 1.75rem 0 2rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #2563eb; /* subtle authority cue */
+  background-color: #f9fafb;
+  border-radius: 6px;
+}
+
+.primary-tool__label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  margin-bottom: 0.35rem;
+}
+
+.primary-tool__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  line-height: 1.35;
+}
+
+.primary-tool__title a {
+  color: #111827;
+  text-decoration: none;
+}
+
+.primary-tool__title a:hover {
+  text-decoration: underline;
+}
+
+.primary-tool__description {
+  font-size: 0.9rem;
+  color: #374151;
+  margin: 0;
+}
+
+.primary-tool + section {
+  margin-top: 2.5rem;
+}
+
+/* ===============================
+   Employee vs Contractor Teaser
+================================ */
+
+.calculator-teaser {
+  margin: 40px 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.calculator-teaser h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #1a73e8;
+  text-align: center;
+}
+
+.calculator-teaser p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Form inside teaser */
+.calculator-teaser .calculator-form {
+  display: grid;
+  gap: 16px;
+}
+
+.calculator-teaser .calculator-form label {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.calculator-teaser .calculator-form input[type="number"] {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.calculator-teaser .teaser-result {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+}
+
+.calculator-teaser .teaser-result p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.calculator-teaser .teaser-result strong {
+  color: #111;
+}
+
+@media (max-width: 480px) {
+  .calculator-teaser {
+    padding: 16px;
+  }
+
+  .calculator-teaser h2 {
+    font-size: 1.3rem;
+  }
+
+  .calculator-teaser p {
+    font-size: 0.9rem;
+  }
+
+  .calculator-teaser .calculator-form input[type="number"] {
+    font-size: 0.95rem;
+    padding: 8px 10px;
+  }
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: #1a73e8;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1666c1;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f1f5ff;
+  color: #1a73e8;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e7ff;
+}
+
+/* ===============================
+   Calculator breakdown toggle
+================================ */
+
+.calc-toggle {
+  border: none;               /* .btn-secondary handles look */
+  cursor: pointer;
+}
+
+.calc-breakdown {
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f9fafb;
+}
+
+.calc-breakdown .muted {
+  color: #777;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+
+/* ===============================
+   Call-to-Action Wrappers
+=============================== */
+
+/* Hero section CTA */
+.hero-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Calculator pages / teaser CTA */
+.calculator-teaser-cta,
+.calculator-cta {
+  text-align: center;
+  margin: 18px 0 28px;
+}
+
+/* Guide page CTA */
+.guide-cta {
+  text-align: center;
+  margin: 18px 0 28px;
+}
+
+/* FAQ page CTA */
+.faq-cta {
+  text-align: center;
+  margin: 18px 0 28px;
+}
+
+/* Button styles are reused from btn-primary / btn-secondary */
+
+/* ===============================
+   Lead Capture / Email Form
+================================ */
+.lead-capture {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.lead-capture form {
+  display: grid;
+  gap: 16px;
+}
+
+.lead-capture label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.lead-capture input[type="text"],
+.lead-capture input[type="email"] {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.lead-capture button {
+  display: inline-block;
+  padding: 12px 22px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  background-color: #1a73e8;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lead-capture button:hover {
+  background-color: #1666c1;
+}
+
+
+/* ===============================
+   Download Report Form Spacing
+================================ */
+#downloadReportForm label {
+  display: block;
+  margin-bottom: 6px;  /* space below label */
+  font-weight: 600;
+}
+
+#downloadReportForm input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px; /* space below input */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#downloadReportForm button {
+  margin-top: 10px;
+}

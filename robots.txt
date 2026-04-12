@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block HTML layout partials (not public pages)
+Disallow: /partials/
+
+# Block affiliate links
+Disallow: /go/
+
+# Sitemap
+Sitemap: https://projectcostcalculators.com/sitemap.xml

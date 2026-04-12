@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Analytics (privacy-friendly) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    /* Default: no consent required, no cookies */
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      client_storage: 'none'
+    });
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="application-name" content="Project Cost Calculators">
+  <title>Service Hourly Rate Calculator – Find Your Rate</title>
+  <meta name="description"
+    content="Free hourly rate calculator for freelancers and service providers. Enter income goal, overhead, and utilization to get a realistic rate range. No signup, no data stored.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://projectcostcalculators.com/service-hourly-rate-calculator">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96.png">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:site_name" content="Project Cost Calculators">
+  <meta property="og:title" content="Service Hourly Rate Calculator">
+  <meta property="og:description"
+    content="Estimate a realistic hourly rate range based on income goals, overhead, utilization, and profit margin.">
+  <meta property="og:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="https://projectcostcalculators.com/service-hourly-rate-calculator">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Service Hourly Rate Calculator">
+  <meta name="twitter:description" content="Set a profitable hourly rate in seconds.">
+  <meta name="twitter:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
+
+  <!-- WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://projectcostcalculators.com/service-hourly-rate-calculator#webpage",
+    "name": "Service Hourly Rate Calculator – Set a Profitable Hourly Rate",
+    "url": "https://projectcostcalculators.com/service-hourly-rate-calculator",
+    "description": "Estimate a realistic hourly rate range based on target annual income, overhead, utilization, and profit margin.",
+    "dateModified": "2026-03-15",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" }
+  }
+  </script>
+
+  <!-- Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://projectcostcalculators.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Hourly Rate Calculator", "item": "https://projectcostcalculators.com/service-hourly-rate-calculator" }
+    ]
+  }
+  </script>
+
+  <!-- HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Calculate Your Service Hourly Rate",
+    "description": "Steps to set a profitable hourly rate using the Service Hourly Rate Calculator.",
+    "step": [
+      { "@type": "HowToStep", "text": "Enter your target annual income and annual business overhead." },
+      { "@type": "HowToStep", "text": "Set your billable hours per week, working weeks per year, and utilization rate." },
+      { "@type": "HowToStep", "text": "Choose a profit margin target." },
+      { "@type": "HowToStep", "text": "Review the hourly rate range and adjust inputs until it matches your goals." }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage (matches visible FAQ below) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://projectcostcalculators.com/service-hourly-rate-calculator#faq",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/service-hourly-rate-calculator#webpage" },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate the hourly rate I should charge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A practical hourly rate covers your income goal plus overhead, then adds a profit margin, divided by realistic billable hours (after utilization). This calculator estimates that range."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is utilization and why does it matter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Utilization is the percent of your working time that is actually billable. Lower utilization means fewer billable hours, which increases the hourly rate needed to hit the same annual targets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should overhead be a dollar amount or a percent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both approaches can work, but a yearly dollar estimate is easiest to plan with (software, tools, insurance, bookkeeping, marketing). Use a conservative number and refine later."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I charge hourly or fixed price?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hourly is simpler when scope is unclear. Fixed price works best when deliverables are defined and you can control change requests. Many providers price fixed projects using an hourly rate baseline plus a risk buffer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you store any data I enter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All calculations run locally in your browser and no inputs are stored or transmitted."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+<body data-tool="service-hourly-rate-calculator">
+
+  <div id="header"></div>
+
+  <main class="container">
+
+    <section class="hero">
+      <h1>Service Hourly Rate Calculator</h1>
+      <p class="intro">
+        Estimate a realistic <strong>hourly rate range</strong> that covers your income goal, overhead, and a target
+        profit margin —
+        based on realistic billable time (utilization). Results update automatically.
+      </p>
+    </section>
+
+    <form class="calculator-form" autocomplete="off">
+
+      <label>
+        Target annual income (before tax)
+        <input id="hrIncome" type="number" inputmode="numeric" min="0" step="1000" value="80000"
+          aria-describedby="hr-hint">
+      </label>
+
+      <label>
+        Annual overhead (tools, software, insurance, etc.)
+        <input id="hrOverhead" type="number" inputmode="numeric" min="0" step="500" value="12000"
+          aria-describedby="hr-hint">
+      </label>
+
+      <label>
+        Billable hours per week
+        <input id="hrBillableHours" type="number" inputmode="decimal" min="0" step="1" value="25"
+          aria-describedby="hr-hint">
+      </label>
+
+      <label>
+        Working weeks per year
+        <input id="hrWeeks" type="number" inputmode="numeric" min="1" step="1" value="46" aria-describedby="hr-hint">
+      </label>
+
+      <label>
+        Utilization (billable % of working time)
+        <select id="hrUtilization" aria-describedby="hr-hint">
+          <option value="0.5">50% (lots of sales/admin)</option>
+          <option value="0.6">60%</option>
+          <option value="0.7" selected>70%</option>
+          <option value="0.8">80%</option>
+          <option value="0.9">90% (highly optimized)</option>
+        </select>
+      </label>
+
+      <label>
+        Profit margin target
+        <select id="hrMargin" aria-describedby="hr-hint">
+          <option value="0.1">10%</option>
+          <option value="0.2" selected>20%</option>
+          <option value="0.3">30%</option>
+          <option value="0.4">40%</option>
+        </select>
+      </label>
+
+      <p class="hint" id="hr-hint">Results update automatically</p>
+
+      <div class="result" id="hourlyRateResult" aria-live="polite"></div>
+    </form>
+
+    <section>
+      <h2>Hourly rate formula (how this calculator works)</h2>
+      <p>
+        A practical hourly rate starts with your required annual revenue, then divides it by realistic billable hours:
+      </p>
+      <p>
+        <strong>Hourly rate ≈ (Income goal + Overhead) ÷ (Billable hours per year × Utilization) × (1 + Profit
+          margin)</strong>
+      </p>
+      <p class="hint">
+        Utilization matters because not all working time is billable (sales, admin, planning, revisions, and context
+        switching).
+      </p>
+    </section>
+
+    <section>
+      <h2>Why utilization changes your rate so much</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Utilization</th>
+            <th>What it means</th>
+            <th>Typical scenario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>50–60%</strong></td>
+            <td>Many non-billable hours.</td>
+            <td>Newer freelancers, heavy sales/admin, lots of revisions.</td>
+          </tr>
+          <tr>
+            <td><strong>70%</strong></td>
+            <td>Balanced workload.</td>
+            <td>Established work flow with some admin and project management.</td>
+          </tr>
+          <tr>
+            <td><strong>80–90%</strong></td>
+            <td>Highly optimized.</td>
+            <td>Retainers, strong systems, minimal interruptions.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>What this estimate includes</h2>
+      <p>
+        This calculator covers your income goal + yearly overhead, then applies a profit margin and divides by realistic
+        billable hours.
+        The biggest drivers are utilization and weekly billable capacity.
+      </p>
+      <p class="hub-link">
+        Estimating a full project too? Try the
+        <a href="/project-cost-estimator">Project Cost Estimator</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>What to include in overhead</h2>
+      <p>Overhead is everything you pay for to deliver work—even if clients don’t see it.</p>
+      <ul>
+        <li><strong>Software/tools:</strong> design tools, dev tools, email, CRM, subscriptions.</li>
+        <li><strong>Professional costs:</strong> accounting, legal, insurance.</li>
+        <li><strong>Marketing/sales:</strong> ads, website, proposals, networking.</li>
+        <li><strong>Hardware:</strong> laptop, equipment, replacements.</li>
+        <li><strong>Contractors:</strong> outsourcing, VA help, specialists.</li>
+      </ul>
+
+      <p class="hub-link">
+        Want a framework for converting hourly rates into fixed-price packages? Read the
+        <a href="/service-pricing-guide">Service Pricing Guide</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tools that help you charge and collect</h2>
+      <p>Once you have a baseline rate, these tools help turn it into proposals and invoices.</p>
+      <ul>
+        <li><a href="/go/bonsai" target="_blank" rel="nofollow sponsored noopener noreferrer">Bonsai</a> — proposals, contracts, invoicing</li>
+        <li><a href="/go/freshbooks" target="_blank" rel="nofollow sponsored noopener noreferrer">FreshBooks</a> — invoicing + accounting basics</li>
+        <li><a href="/go/honeybook" target="_blank" rel="nofollow sponsored noopener noreferrer">HoneyBook</a> — client pipeline + payments</li>
+      </ul>
+      <p class="hub-link">More options: <a href="/recommended-tools">Recommended Tools</a>.</p>
+    </section>
+
+    <section>
+      <h2>Related estimators</h2>
+      <ul>
+        <li><a href="/project-cost-estimator">Project Cost Estimator</a></li>
+        <li><a href="/website-development-cost-estimator">Website Development Cost Estimator</a></li>
+        <li><a href="/saas-development-cost-estimator">SaaS Development Cost Estimator</a></li>
+        <li><a href="/freelance-service-pricing-calculator">Freelance Service Pricing Calculator</a></li>
+        <li><a href="/service-cost-breakdown">Service Cost Breakdown</a></li>
+      </ul>
+    </section>
+
+    <!-- Visible FAQ (matches FAQPage JSON-LD) -->
+    <section class="faq">
+       <h2>Hourly rate calculator: common questions</h2>
+
+      <h3>How do I calculate the hourly rate I should charge?</h3>
+      <p>
+        A practical hourly rate covers your income goal plus overhead, then adds a profit margin, divided by realistic
+        billable hours
+        (after utilization). This calculator estimates that range.
+      </p>
+
+      <p>
+        To translate hourly rates into full project budgets, use the
+        <a href="/project-cost-estimator">Project Cost Estimator</a>.
+      </p>
+
+      <h3>What is utilization and why does it matter?</h3>
+      <p>
+        Utilization is the percent of your working time that is actually billable. Lower utilization means fewer
+        billable hours, which
+        increases the hourly rate needed to hit the same annual targets.
+      </p>
+
+      <h3>Should overhead be a dollar amount or a percent?</h3>
+      <p>
+        Both approaches can work, but a yearly dollar estimate is easiest to plan with (software, tools, insurance,
+        bookkeeping,
+        marketing). Use a conservative number and refine later.
+      </p>
+
+      <h3>Should I charge hourly or fixed price?</h3>
+      <p>
+        Hourly is simpler when scope is unclear. Fixed price works best when deliverables are defined and you can
+        control change requests.
+        Many providers price fixed projects using an hourly rate baseline plus a risk buffer.
+      </p>
+
+      <h3>Do you store any data I enter?</h3>
+      <p>No. All calculations run locally in your browser and no inputs are stored or transmitted.</p>
+
+      <div class="faq-cta">
+        <a class="btn-secondary" href="/project-cost-estimator">Try the Project Cost Estimator</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="/assets/js/layout.js" defer></script>
+  <script src="/assets/js/calculators.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Analytics (privacy-friendly) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    /* Default: no consent required, no cookies */
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      client_storage: 'none'
+    });
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="application-name" content="Project Cost Calculators">
+  <title>Service Pricing Calculator for Freelancers — Free Tool</title>
+  <meta name="description"
+    content="Free service pricing calculator for freelancers. Enter hours, rate, overhead, and margin to price any project or package instantly. No signup, no data stored.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://projectcostcalculators.com/freelance-service-pricing-calculator">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96.png">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:site_name" content="Project Cost Calculators">
+  <meta property="og:title" content="Freelance Service Pricing Calculator">
+  <meta property="og:description"
+    content="Estimate a realistic freelance project or package price based on hours, rate, overhead, buffer, and margin.">
+  <meta property="og:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="https://projectcostcalculators.com/freelance-service-pricing-calculator">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Freelance Service Pricing Calculator">
+  <meta name="twitter:description" content="Price your freelance project or package in seconds.">
+  <meta name="twitter:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
+
+  <!-- WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#webpage",
+    "name": "Freelance Service Pricing Calculator – Price a Project or Package",
+    "url": "https://projectcostcalculators.com/freelance-service-pricing-calculator",
+    "description": "Estimate a realistic freelance project or package price based on estimated hours, hourly rate, overhead, risk buffer, and profit margin.",
+    "dateModified": "2026-03-15",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
+    "mainEntity": { "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#faq" }
+  }
+  </script>
+
+  <!-- Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://projectcostcalculators.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Freelance Service Pricing Calculator", "item": "https://projectcostcalculators.com/freelance-service-pricing-calculator" }
+    ]
+  }
+  </script>
+
+  <!-- HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Price a Freelance Service",
+    "description": "Steps to price a freelance project or package using the Freelance Service Pricing Calculator.",
+    "step": [
+      { "@type": "HowToStep", "text": "Enter estimated delivery hours and your target hourly rate." },
+      { "@type": "HowToStep", "text": "Add an overhead allocation and a risk buffer for uncertainty." },
+      { "@type": "HowToStep", "text": "Choose a profit margin target." },
+      { "@type": "HowToStep", "text": "Review the suggested project/package price range and adjust inputs until it fits your goals." }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage (matches visible FAQ below) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#faq",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#webpage" },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should I price freelance work hourly or as a fixed project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both can work. Hourly is straightforward, while fixed pricing can better capture value and reduce client uncertainty. This calculator helps you translate hours and risk into a realistic fixed price."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a risk buffer and how big should it be?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A risk buffer accounts for unknowns like scope creep, revisions, and blockers. Many freelancers start with 10–25% depending on clarity and stakeholder count."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I include overhead in a project price?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Overhead includes tools, software, insurance, taxes, admin time, and marketing. A simple approach is to add a per-project overhead allocation based on how much of your yearly overhead this project should cover."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you store any data I enter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All calculations run locally in your browser and no inputs are stored or transmitted."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+<body data-tool="freelance-service-pricing-calculator">
+
+  <div id="header"></div>
+
+  <main class="container">
+
+    <section class="hero">
+      <h1>Freelance Service Pricing Calculator</h1>
+      <p class="intro">
+        Use this <strong>service pricing calculator</strong> to price any freelance <strong>project or service
+          package</strong> using hours, rate, overhead, a risk buffer, and
+        profit margin. Most freelance packages range from <strong>$500 for small deliverables</strong> to
+        <strong>$50,000+ for complex engagements</strong> — use this <strong>service pricing calculator</strong>
+        to find the right price for your scope. Results update instantly. No data stored.
+      </p>
+    </section>
+
+    <p class="hint">
+      On this page: <a href="#calculator">Calculator</a> · <a href="#formula">Pricing formula</a> ·
+      <a href="#tiers">Package tiers</a> · <a href="#scope">Scope checklist</a> · <a href="#faq">FAQ</a>
+    </p>
+
+    <form class="calculator-form" id="calculator" autocomplete="off">
+
+      <label>
+        Estimated delivery hours
+        <input id="fpHours" type="number" inputmode="decimal" min="0" step="1" value="40" aria-describedby="fp-hint">
+      </label>
+
+      <label>
+        Hourly rate (target)
+        <input id="fpRate" type="number" inputmode="decimal" min="0" step="5" value="100" aria-describedby="fp-hint">
+      </label>
+
+      <label>
+        Overhead allocation (tools, admin, marketing)
+        <input id="fpOverhead" type="number" inputmode="numeric" min="0" step="50" value="250"
+          aria-describedby="fp-hint">
+      </label>
+
+      <label>
+        Risk buffer
+        <select id="fpBuffer" aria-describedby="fp-hint">
+          <option value="0.0">0% (very clear scope)</option>
+          <option value="0.1" selected>10%</option>
+          <option value="0.15">15%</option>
+          <option value="0.2">20%</option>
+          <option value="0.25">25%</option>
+          <option value="0.35">35% (high uncertainty)</option>
+        </select>
+      </label>
+
+      <label>
+        Profit margin target
+        <select id="fpMargin" aria-describedby="fp-hint">
+          <option value="0.1">10%</option>
+          <option value="0.2" selected>20%</option>
+          <option value="0.3">30%</option>
+          <option value="0.4">40%</option>
+        </select>
+      </label>
+
+      <p class="hint" id="fp-hint">Results update automatically</p>
+
+      <div class="result" id="freelancePriceResult" aria-live="polite"></div>
+    </form>
+
+    <p class="hint">
+      Turn this price into a <a href="/go/bonsai" target="_blank" rel="nofollow sponsored noopener noreferrer">proposal
+        & invoice →</a>
+    </p>
+
+    <section id="formula">
+      <h2>Freelance pricing formula (how this calculator works)</h2>
+      <p>
+        This tool converts hours into a fixed price, then adds uncertainty, overhead, and margin:
+      </p>
+      <p>
+        <strong>Price ≈ (Hours × Rate) × (1 + Risk buffer) + Overhead</strong>
+      </p>
+      <p>
+        Then it applies your <strong>profit margin target</strong> so the final number supports growth and non-billable
+        time.
+      </p>
+    </section>
+
+    <section id="tiers">
+      <h2>Simple package tiers (example)</h2>
+      <p>
+        Many freelancers sell 3 tiers to reduce back-and-forth and anchor value. You can use your estimate as the
+        “Standard” tier,
+        then create a lower and higher option.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tier</th>
+            <th>What it includes</th>
+            <th>How to set it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Starter</strong></td>
+            <td>Core deliverable only, limited revisions, minimal support.</td>
+            <td>Reduce hours/scope and keep the buffer smaller.</td>
+          </tr>
+          <tr>
+            <td><strong>Standard</strong></td>
+            <td>Most common choice, balanced scope and revisions.</td>
+            <td>Use the calculator estimate as your baseline.</td>
+          </tr>
+          <tr>
+            <td><strong>Premium</strong></td>
+            <td>Priority delivery, more revisions, strategy/support included.</td>
+            <td>Increase buffer, add support time, and price urgency.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>What this estimate includes</h2>
+      <p>
+        This calculator converts hours into a fixed project price, then adds overhead, a risk buffer, and a profit
+        margin.
+        The biggest drivers are estimated hours and uncertainty (buffer).
+      </p>
+      <p>
+        If you’re estimating beyond freelance work, the
+        <a href="/project-cost-estimator">Project Cost Estimator</a>
+        covers a wider range of service types and scopes.
+      </p>
+      <p class="hub-link">
+        Want to set your baseline rate first? Try the
+        <a href="/service-hourly-rate-calculator">Service Hourly Rate Calculator</a>.
+      </p>
+    </section>
+
+    <section id="scope">
+      <h2>Scope checklist (prevents underpricing)</h2>
+      <ul>
+        <li><strong>Deliverables:</strong> what the client receives (files, pages, assets, copy, etc.).</li>
+        <li><strong>Revisions:</strong> how many rounds and what counts as a revision.</li>
+        <li><strong>Dependencies:</strong> client-provided content, access, approvals, stakeholders.</li>
+        <li><strong>Timeline:</strong> what’s required to hit the deadline (and what causes delays).</li>
+        <li><strong>Handover:</strong> documentation, training, and post-launch support.</li>
+      </ul>
+
+      <p class="hub-link">
+        For a full framework on comparing proposals and avoiding surprise costs, read the
+        <a href="/service-pricing-guide">Service Pricing Guide</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tools freelancers use to package and sell services</h2>
+      <ul>
+        <li><a href="/go/bonsai" target="_blank" rel="nofollow sponsored noopener noreferrer">Bonsai</a> — package
+          pricing, proposals, invoices</li>
+        <li><a href="/go/honeybook" target="_blank" rel="nofollow sponsored noopener noreferrer">HoneyBook</a> — client
+          management + payments</li>
+        <li><a href="/go/notion" target="_blank" rel="nofollow sponsored noopener noreferrer">Notion</a> — scope docs,
+          deliverables, revision rules</li>
+      </ul>
+      <p class="hub-link">Need clients or contractors? Try <a href="/go/upwork" target="_blank"
+          rel="nofollow sponsored noopener noreferrer">Upwork</a> (broad) or <a href="/go/toptal" target="_blank"
+          rel="nofollow sponsored noopener noreferrer">Toptal</a> (vetted).</p>
+    </section>
+
+    <section>
+      <h2>Related estimators</h2>
+      <ul>
+        <li><a href="/service-hourly-rate-calculator">Service Hourly Rate Calculator</a></li>
+        <li><a href="/project-cost-estimator">Project Cost Estimator</a></li>
+        <li><a href="/website-development-cost-estimator">Website Development Cost Estimator</a></li>
+        <li><a href="/saas-development-cost-estimator">SaaS Development Cost Estimator</a></li>
+        <li><a href="/website-maintenance-cost-estimator">Website Maintenance Cost Estimator</a></li>
+        <li><a href="/service-cost-breakdown">Service Cost Breakdown</a></li>
+      </ul>
+    </section>
+
+    <!-- Visible FAQ (matches FAQPage JSON-LD) -->
+    <section class="faq" id="faq">
+      <h2>Freelance service pricing: common questions</h2>
+
+      <h3>Should I price freelance work hourly or as a fixed project?</h3>
+      <p>
+        Both can work. Hourly is straightforward, while fixed pricing can better capture value and reduce client
+        uncertainty.
+        This calculator helps you translate hours and risk into a realistic fixed price.
+      </p>
+
+      <h3>What is a risk buffer and how big should it be?</h3>
+      <p>
+        A risk buffer accounts for unknowns like scope creep, revisions, and blockers. Many freelancers start with
+        10–25% depending on
+        clarity and stakeholder count.
+      </p>
+
+      <h3>How do I include overhead in a project price?</h3>
+      <p>
+        Overhead includes tools, software, insurance, taxes, admin time, and marketing. A simple approach is to add a
+        per-project overhead
+        allocation based on how much of your yearly overhead this project should cover.
+      </p>
+      <p>
+        For a deeper explanation of what actually drives pricing,
+        see the <a href="/service-cost-breakdown">Service Cost Breakdown</a>.
+      </p>
+
+      <h3>Do you store any data I enter?</h3>
+      <p>No. All calculations run locally in your browser and no inputs are stored or transmitted.</p>
+
+      <div class="faq-cta">
+        <a class="btn-secondary" href="/service-hourly-rate-calculator">Try the Service Hourly Rate Calculator</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="/assets/js/layout.js" defer></script>
+  <script src="/assets/js/calculators.js" defer></script>
+</body>
+
+</html>

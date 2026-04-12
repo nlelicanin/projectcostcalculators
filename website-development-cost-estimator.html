@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Analytics (privacy-friendly) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    /* Default: no consent required, no cookies */
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      client_storage: 'none'
+    });
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="application-name" content="Project Cost Calculators">
+  <title>Website Development Cost Estimator — Free Tool</title>
+  <meta name="description"
+    content="Free website development cost estimator. Adjust site type, page count, complexity, and timeline for an instant cost range — from $1,000 to $100,000+. No signup required.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://projectcostcalculators.com/website-development-cost-estimator">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96.png">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:site_name" content="Project Cost Calculators">
+  <meta property="og:title" content="Website Development Cost Estimator">
+  <meta property="og:description"
+    content="Estimate a realistic website development cost range based on site type, pages, complexity, and timeline.">
+  <meta property="og:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="https://projectcostcalculators.com/website-development-cost-estimator">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Website Development Cost Estimator">
+  <meta name="twitter:description"
+    content="Estimate a realistic website build cost range based on scope and complexity.">
+  <meta name="twitter:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
+
+  <!-- WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://projectcostcalculators.com/website-development-cost-estimator#webpage",
+    "name": "Website Development Cost Estimator – Budget a Website Project",
+    "url": "https://projectcostcalculators.com/website-development-cost-estimator",
+    "description": "Estimate a realistic website development cost range based on site type, page count, complexity, integrations, and timeline.",
+    "dateModified": "2026-03-15",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
+    "mainEntity": { "@id": "https://projectcostcalculators.com/website-development-cost-estimator#faq" }
+  }
+  </script>
+
+  <!-- Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://projectcostcalculators.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Website Development Cost Estimator", "item": "https://projectcostcalculators.com/website-development-cost-estimator" }
+    ]
+  }
+  </script>
+
+  <!-- HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Estimate Website Development Cost",
+    "description": "Steps to estimate a realistic website development cost range using the Website Development Cost Estimator.",
+    "step": [
+      { "@type": "HowToStep", "text": "Select your website type (marketing site, business website, eCommerce, etc.)." },
+      { "@type": "HowToStep", "text": "Choose your approximate page count and complexity level." },
+      { "@type": "HowToStep", "text": "Indicate integrations and timeline urgency." },
+      { "@type": "HowToStep", "text": "Review the estimated cost range and cost drivers." }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage (matches visible FAQ below) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://projectcostcalculators.com/website-development-cost-estimator#faq",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/website-development-cost-estimator#webpage" },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a website cost to build?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Website costs vary based on scope, page count, design complexity, integrations, and timeline. This estimator provides a planning range based on common pricing drivers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What increases website development cost the most?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Custom design, complex functionality, integrations (payments, CRM, booking), content migration, and rush timelines typically increase website development cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a website builder cheaper than custom development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Often yes for simple sites, but builders can become costly when you need custom functionality, performance tuning, or integrations. Use this estimate as a starting point, then compare options."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you store any data I enter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All calculations run locally in your browser and no inputs are stored or transmitted."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+<body data-tool="website-development-cost-estimator">
+
+  <div id="header"></div>
+
+  <main class="container">
+
+    <section class="hero">
+      <h1>Website Development Cost Estimator</h1>
+      <p class="intro">
+        Estimate a realistic <strong>website development cost</strong> based on the biggest pricing drivers:
+        site type, page count, design complexity, integrations, and timeline.
+        Simple marketing sites typically cost <strong>$1,000–$5,000</strong>,
+        business websites with custom design run <strong>$5,000–$25,000</strong>,
+        and complex builds with e-commerce or custom functionality reach <strong>$25,000–$100,000+</strong>.
+        Adjust the inputs below for your specific project — results update instantly. No signup, no data stored.
+      </p>
+    </section>
+
+    <p class="hint">
+      On this page: <a href="#estimator">Estimator</a> · <a href="#includes">What's included</a> ·
+      <a href="#hidden-costs">Hidden costs</a> · <a href="#quotes">Getting quotes</a> · <a href="#faq">FAQ</a>
+    </p>
+
+    <form id="estimator" class="calculator-form" autocomplete="off">
+      <label>
+        Website type
+        <select id="wdSiteType" aria-describedby="wd-hint">
+          <option value="marketing">Marketing / landing page site</option>
+          <option value="business" selected>Business website</option>
+          <option value="content">Content site / blog</option>
+          <option value="ecommerce">eCommerce site</option>
+          <option value="webapp">Web app-style site (accounts, dashboards)</option>
+        </select>
+      </label>
+
+      <label>
+        Approximate page count
+        <select id="wdPages" aria-describedby="wd-hint">
+          <option value="1_5">1–5 pages</option>
+          <option value="6_15" selected>6–15 pages</option>
+          <option value="16_40">16–40 pages</option>
+          <option value="40_plus">40+ pages</option>
+        </select>
+      </label>
+
+      <label>
+        Design & functionality complexity
+        <select id="wdComplexity" aria-describedby="wd-hint">
+          <option value="low">Low (template / standard)</option>
+          <option value="medium" selected>Medium (custom sections, some logic)</option>
+          <option value="high">High (custom UX, advanced logic)</option>
+        </select>
+      </label>
+
+      <label>
+        Integrations needed
+        <select id="wdIntegrations" aria-describedby="wd-hint">
+          <option value="none" selected>None / basic</option>
+          <option value="some">Some (analytics, email, forms, basic CRM)</option>
+          <option value="many">Many (payments, booking, CRM, automation)</option>
+        </select>
+      </label>
+
+      <label>
+        Timeline urgency
+        <select id="wdUrgency" aria-describedby="wd-hint">
+          <option value="flexible" selected>Flexible</option>
+          <option value="standard">Standard deadline</option>
+          <option value="rush">Rush</option>
+        </select>
+      </label>
+
+      <label>
+        Provider type
+        <select id="wdProvider" aria-describedby="wd-hint">
+          <option value="freelancer">Freelancer</option>
+          <option value="smallAgency" selected>Small agency / small team</option>
+          <option value="agency">Agency / full-service provider</option>
+        </select>
+      </label>
+
+      <p class="hint" id="wd-hint">Results update automatically</p>
+
+      <div class="result" id="websiteDevResult" aria-live="polite"></div>
+    </form>
+
+    <section id="includes">
+      <h2>What this estimate includes</h2>
+      <p>
+        The estimate assumes typical discovery/planning, design/build, QA, and launch support for a standard website
+        build.
+        Costs move primarily with complexity, integrations, content migration, and timeline urgency.
+      </p>
+      <p class="hub-link">
+        Want to understand the “why” behind costs? Read the
+        <a href="/service-cost-breakdown">Service Cost Breakdown</a>.
+      </p>
+    </section>
+
+    <section id="hidden-costs">
+      <h2>Common hidden costs (budget separately)</h2>
+      <p>
+        Many website quotes exclude ongoing tools or third-party services. Use this checklist so your “build cost”
+        estimate
+        matches your real budget.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Cost item</th>
+            <th>Why it shows up</th>
+            <th>Typical frequency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Domain + hosting</strong></td>
+            <td>Required to run the site; quality hosting affects speed and uptime.</td>
+            <td>Monthly / yearly</td>
+          </tr>
+          <tr>
+            <td><strong>CMS / plugin licenses</strong></td>
+            <td>Paid themes, premium plugins, form tools, backups, security add-ons.</td>
+            <td>Yearly</td>
+          </tr>
+          <tr>
+            <td><strong>Analytics / tracking setup</strong></td>
+            <td>Proper event tracking, conversion setup, and reporting.</td>
+            <td>One-time + optional ongoing</td>
+          </tr>
+          <tr>
+            <td><strong>Content writing + images</strong></td>
+            <td>Pages need copy and visuals; migration can be time-consuming.</td>
+            <td>One-time</td>
+          </tr>
+          <tr>
+            <td><strong>SEO basics</strong></td>
+            <td>Metadata, internal linking, redirects, technical fixes.</td>
+            <td>One-time + periodic</td>
+          </tr>
+          <tr>
+            <td><strong>Maintenance</strong></td>
+            <td>Updates, backups, uptime monitoring, security patches.</td>
+            <td>Monthly</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="hub-link">
+        Want a framework for comparing proposals? Read the
+        <a href="/service-pricing-guide">Service Pricing Guide</a>.
+      </p>
+
+      <div class="primary-tool">
+        <span class="primary-tool__label">Optional tools</span>
+        <h3 class="primary-tool__title">
+          <a href="/go/cloudways" target="_blank" rel="nofollow sponsored noopener noreferrer">Cloudways (managed
+            hosting)</a>
+        </h3>
+        <p class="primary-tool__description">
+          Hosting is a common “hidden cost.” Managed hosting can reduce ongoing maintenance overhead.
+          For DIY cloud hosting, see <a href="/go/digitalocean" target="_blank"
+            rel="nofollow sponsored noopener noreferrer">DigitalOcean</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="quotes">
+      <h2>How to get more accurate website quotes</h2>
+      <p>Before you request proposals, write down these inputs. You’ll get tighter pricing and fewer surprises.</p>
+      <ul>
+        <li><strong>Site goal:</strong> leads, bookings, sales, newsletter, or education.</li>
+        <li><strong>Page list:</strong> the pages you need at launch (and what can wait).</li>
+        <li><strong>Features:</strong> forms, booking, payments, login/accounts, multilingual, accessibility.</li>
+        <li><strong>Integrations:</strong> CRM, email marketing, scheduling, payments, analytics events.</li>
+        <li><strong>Content readiness:</strong> do you have copy/images, or should the provider create them?</li>
+        <li><strong>Timeline:</strong> flexible vs fixed deadline (rush increases cost).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Related estimators</h2>
+      <ul>
+        <li><a href="/website-maintenance-cost-estimator">Website Maintenance Cost Estimator</a></li>
+        <li><a href="/project-cost-estimator">Project Cost Estimator</a></li>
+        <li><a href="/saas-development-cost-estimator">SaaS Development Cost Estimator</a></li>
+        <li><a href="/freelance-service-pricing-calculator">Freelance Service Pricing Calculator</a></li>
+        <li><a href="/service-hourly-rate-calculator">Service Hourly Rate Calculator</a></li>
+        <li><a href="/service-pricing-guide">Service Pricing Guide</a></li>
+      </ul>
+    </section>
+
+    <!-- Visible FAQ (matches FAQPage JSON-LD) -->
+    <section id="faq" class="faq">
+      <h2>Website development cost: common questions</h2>
+
+      <h3>How much does a website cost to build?</h3>
+      <p>
+        Website costs vary based on scope, page count, design complexity, integrations, and timeline. This estimator
+        provides a
+        planning range based on common pricing drivers.
+      </p>
+
+      <h3>What increases website development cost the most?</h3>
+      <p>
+        Custom design, complex functionality, integrations (payments, CRM, booking), content migration, and rush
+        timelines typically
+        increase website development cost.
+      </p>
+
+      <h3>Is a website builder cheaper than custom development?</h3>
+      <p>
+        Often yes for simple sites, but builders can become costly when you need custom functionality, performance
+        tuning, or
+        integrations. Use this estimate as a starting point, then compare options.
+      </p>
+
+      <h3>Do you store any data I enter?</h3>
+      <p>No. All calculations run locally in your browser and no inputs are stored or transmitted.</p>
+
+      <div class="faq-cta">
+        <a class="btn-secondary" href="/project-cost-estimator">Try the Project Cost Estimator</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="/assets/js/layout.js" defer></script>
+  <script src="/assets/js/calculators.js" defer></script>
+</body>
+
+</html>

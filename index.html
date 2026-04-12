@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Analytics (privacy-friendly) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    /* Default: no consent required, no cookies */
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false,
+      client_storage: 'none'
+    });
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="application-name" content="Project Cost Calculators">
+  <title>Service Pricing Calculator — Free Cost Estimator Tools</title>
+  <meta name="description"
+    content="Free service pricing calculators for websites, SaaS, freelance packages, and hourly rates. Get instant project cost estimates — no signup, no stored data.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://projectcostcalculators.com/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/images/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96.png">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:site_name" content="Project Cost Calculators">
+  <meta property="og:title" content="Project Cost Calculators – Estimate Project & Service Pricing">
+  <meta property="og:description"
+    content="Estimate realistic service and project cost ranges using privacy-first calculators.">
+  <meta property="og:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
+  <meta property="og:image:alt" content="Project Cost Calculators – calculators for project and service pricing">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="https://projectcostcalculators.com/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Project Cost Calculators – Estimate Project & Service Pricing">
+  <meta name="twitter:description"
+    content="Estimate realistic service and project cost ranges using privacy-first calculators.">
+  <meta name="twitter:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
+
+  <!-- ===============================
+       Schema.org
+       Organization + WebSite
+  =============================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://projectcostcalculators.com/#organization",
+    "name": "Project Cost Calculators",
+    "url": "https://projectcostcalculators.com/",
+    "logo": "https://projectcostcalculators.com/assets/images/logo.svg",
+    "description": "Free service cost calculators and pricing guides to help you estimate what common services should cost, compare price ranges, and plan budgets.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "support@projectcostcalculators.com",
+      "availableLanguage": "en"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://projectcostcalculators.com/#website",
+    "url": "https://projectcostcalculators.com/",
+    "name": "Project Cost Calculators",
+    "publisher": { "@id": "https://projectcostcalculators.com/#organization" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://projectcostcalculators.com/#webpage",
+    "name": "Project Cost Calculators: Project Cost Estimate & Pricing Calculators",
+    "url": "https://projectcostcalculators.com/",
+    "description": "Cost estimate calculators for projects and services. Adjust scope, complexity, timeline, and provider type to get realistic pricing ranges for websites, SaaS, freelance work, and hourly rates.",
+    "inLanguage": "en",
+    "dateModified": "2026-03-15",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://projectcostcalculators.com/assets/images/og-image.png"
+    },
+    "about": [
+      { "@type": "Thing", "name": "cost estimate" },
+      { "@type": "Thing", "name": "service pricing" },
+      { "@type": "Thing", "name": "project cost estimation" }
+    ],
+    "mainEntity": { "@id": "https://projectcostcalculators.com/#faq" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://projectcostcalculators.com/#faq",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/#webpage" },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a service pricing calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A service pricing calculator estimates realistic cost ranges for service-based work — like website development, software projects, or freelance services. You input scope, complexity, timeline, and provider type, and get a realistic budget range based on market rates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does a typical service project cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Service project costs vary by type: website builds range from $1,000 to $100,000+; SaaS and web app development from $10,000 to $250,000+; freelance service packages from $500 for small engagements. Use the project cost estimator to get a range for your specific scope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What factors affect service pricing the most?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The four biggest cost drivers are scope, complexity, timeline, and provider type. Rush delivery adds 20–50% in most cases. Agencies typically charge 2–3x freelancer rates for similar work."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+<body data-tool="home">
+
+  <div id="header"></div>
+
+  <main class="container">
+
+    <!-- ===============================
+         Hero
+    ================================ -->
+    <section class="hero">
+      <h1>Service Pricing Calculator — Estimate Any Project or Service Cost</h1>
+      <p class="intro">
+        Get a fast, realistic <strong>service cost estimate</strong> for any project —
+        from a <strong>website build ($1,000–$50,000+)</strong> to a
+        <strong>SaaS app ($10,000–$250,000+)</strong>, <strong>freelance package</strong>,
+        or <strong>hourly rate</strong>.
+        Adjust scope, complexity, and provider type for an instant <strong>project cost estimate</strong>.
+        No sign-up. No stored data.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn-primary" href="/project-cost-estimator">
+          Start with the Project Cost Estimator
+        </a>
+      </div>
+    </section>
+
+    <!-- Quick price reference -->
+    <section id="pricing-ranges" class="authority">
+      <h2>Typical service cost ranges at a glance</h2>
+      <p>
+        Use these as starting benchmarks — then use the calculators below to adjust for your
+        specific scope, complexity, and provider type.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Service Type</th>
+            <th>Entry-Level Range</th>
+            <th>Mid-Range</th>
+            <th>Complex / Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><a href="/website-development-cost-estimator">Website development</a></strong></td>
+            <td>$1,000–$5,000</td>
+            <td>$5,000–$25,000</td>
+            <td>$25,000–$100,000+</td>
+          </tr>
+          <tr>
+            <td><strong><a href="/saas-development-cost-estimator">SaaS / web app</a></strong></td>
+            <td>$10,000–$30,000</td>
+            <td>$30,000–$100,000</td>
+            <td>$100,000–$250,000+</td>
+          </tr>
+          <tr>
+            <td><strong><a href="/freelance-service-pricing-calculator">Freelance service package</a></strong></td>
+            <td>$500–$2,500</td>
+            <td>$2,500–$10,000</td>
+            <td>$10,000–$50,000</td>
+          </tr>
+          <tr>
+            <td><strong><a href="/service-hourly-rate-calculator">Freelance hourly rate</a></strong></td>
+            <td>$25–$75/hr</td>
+            <td>$75–$150/hr</td>
+            <td>$150–$350+/hr</td>
+          </tr>
+          <tr>
+            <td><strong><a href="/website-maintenance-cost-estimator">Website maintenance</a></strong></td>
+            <td>$50–$200/mo</td>
+            <td>$200–$800/mo</td>
+            <td>$800–$3,000+/mo</td>
+          </tr>
+          <tr>
+            <td><strong><a href="/project-cost-estimator">General project estimate</a></strong></td>
+            <td>$1,000–$5,000</td>
+            <td>$5,000–$30,000</td>
+            <td>$30,000–$150,000+</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="hint">
+        Ranges reflect market rates for US-based providers in 2026.
+        Offshore and budget providers typically run 30–60% lower.
+        Use the calculators below to narrow your specific estimate.
+      </p>
+    </section>
+
+    <!-- ===============================
+         Primary Entry Point
+    ================================ -->
+    <section class="primary-tool">
+      <span class="primary-tool__label">Best starting point</span>
+      <h2 class="primary-tool__title">
+        <a href="/project-cost-estimator">Project Cost Estimator</a>
+      </h2>
+      <p class="primary-tool__description">
+        Get a fast, realistic cost range for most service-based projects by adjusting scope,
+        complexity, timeline, and provider type.
+        Try: <a href="/website-development-cost-estimator">website cost estimate</a>, <a
+          href="/saas-development-cost-estimator">SaaS cost estimate</a>, or <a
+          href="/service-hourly-rate-calculator">hourly rate calculator</a>.
+      </p>
+    </section>
+
+    <!-- ===============================
+         Core Calculators
+    ================================ -->
+    <section id="calculators" class="categories">
+      <h2>Pick a starting point</h2>
+
+      <div class="category-grid">
+        <a class="category-card" href="/project-cost-estimator">
+          <h3>Project cost estimator</h3>
+          <p>Scope + complexity + timeline → realistic project range. Best starting point for any service project.
+            <strong>$1k–$150k+</strong></p>
+        </a>
+
+        <a class="category-card" href="/website-development-cost-estimator">
+          <h3>Website development cost</h3>
+          <p>Budget a website build by pages, features, and provider type. <strong>$1,000–$100,000+</strong></p>
+        </a>
+
+        <a class="category-card" href="/saas-development-cost-estimator">
+          <h3>SaaS / web app cost</h3>
+          <p>Estimate app build cost by complexity, features, and delivery timeline. <strong>$10k–$250k+</strong></p>
+        </a>
+
+        <a class="category-card" href="/freelance-service-pricing-calculator">
+          <h3>Freelance service pricing</h3>
+          <p>Price a service package with scope, revisions, and delivery speed. <strong>$500–$50k</strong></p>
+        </a>
+
+        <a class="category-card" href="/service-hourly-rate-calculator">
+          <h3>Hourly rate calculator</h3>
+          <p>Turn income goals + utilization into a target hourly rate. <strong>$25–$350+/hr</strong></p>
+        </a>
+
+        <a class="category-card" href="/website-maintenance-cost-estimator">
+          <h3>Website maintenance cost</h3>
+          <p>Estimate monthly maintenance costs by site complexity and service tier. <strong>$50–$3,000+/mo</strong></p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===============================
+         Education / Trust
+    ================================ -->
+    <section class="authority">
+      <h2>How these estimates work</h2>
+      <p>
+        Each calculator focuses on the handful of factors that usually move price the most:
+        scope, complexity, integrations, timeline, and provider type.
+      </p>
+      <p>
+        Results are <strong>planning ranges</strong>, not quotes. Use them to sanity-check budgets,
+        compare options, and ask better questions when requesting proposals.
+      </p>
+      <p>
+        Learn more in the <a href="/service-cost-breakdown">Service Cost Breakdown</a> and the
+        <a href="/service-pricing-guide">Service Pricing Guide</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Recommended tools (optional)</h2>
+      <p>Tools that help you plan scope, price work, and deliver projects with fewer surprises.</p>
+      <ul>
+        <li><a href="/go/notion" target="_blank" rel="nofollow sponsored noopener noreferrer">Notion</a> — scope and
+          requirements
+        </li>
+        <li><a href="/go/clickup" target="_blank" rel="nofollow sponsored noopener noreferrer">ClickUp</a> — project
+          delivery
+          tracking</li>
+        <li><a href="/go/bonsai" target="_blank" rel="nofollow sponsored noopener noreferrer">Bonsai</a> — proposals and
+          invoicing (freelancers)</li>
+      </ul>
+      <p class="hub-link"><a href="/recommended-tools">Browse Recommended Tools</a>.</p>
+    </section>
+
+    <section>
+      <h2>What affects service pricing the most</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>Why it matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Scope</strong></td>
+            <td>More deliverables and stakeholders usually means more hours and coordination.</td>
+          </tr>
+          <tr>
+            <td><strong>Complexity</strong></td>
+            <td>Custom work, integrations, and edge cases require QA and risk buffers.</td>
+          </tr>
+          <tr>
+            <td><strong>Timeline</strong></td>
+            <td>Rush delivery increases scheduling cost and reduces provider flexibility.</td>
+          </tr>
+          <tr>
+            <td><strong>Provider type</strong></td>
+            <td>Freelancers are leaner; agencies include more process and overhead.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faqs">
+      <h2>Project Cost Calculators: common questions</h2>
+
+      <h3>How much does a typical service project cost?</h3>
+      <p>
+        Service project costs vary widely by type and complexity.
+        Website builds typically range from $1,000 to $100,000+.
+        SaaS and web app development ranges from $10,000 to $250,000+.
+        Freelance service packages start around $500 for small engagements.
+        Use the <a href="/project-cost-estimator">project cost estimator</a> to get
+        a range tailored to your specific scope and provider type.
+      </p>
+
+      <h3>What is a service pricing calculator?</h3>
+      <p>
+        A service pricing calculator is a tool that estimates realistic cost ranges for
+        service-based work — like website development, software projects, or freelance services.
+        You input factors like scope, complexity, timeline, and provider type,
+        and the calculator returns a realistic budget range based on market rates.
+        These tools help clients sanity-check budgets and help freelancers or agencies
+        price their work competitively.
+      </p>
+
+      <h3>How accurate are these cost estimates?</h3>
+      <p>
+        These calculators produce <strong>planning ranges</strong>, not binding quotes.
+        They reflect typical US market rates for 2026 and are designed to help you
+        enter vendor conversations with realistic expectations — not replace them.
+        Actual project costs depend on provider experience, location, and specific requirements.
+        See the <a href="/service-cost-breakdown">service cost breakdown</a> for a closer look at how pricing factors
+        interact.
+      </p>
+
+      <h3>What factors affect service pricing the most?</h3>
+      <p>
+        The four biggest drivers of service cost are: <strong>scope</strong> (how much work is involved),
+        <strong>complexity</strong> (custom integrations, edge cases, QA requirements),
+        <strong>timeline</strong> (rush delivery adds 20–50% in most cases),
+        and <strong>provider type</strong> (agencies typically charge 2–3× freelancer rates
+        for similar work, but include more process and support).
+      </p>
+
+      <h3>Can freelancers use these calculators?</h3>
+      <p>
+        Yes. The <a href="/service-hourly-rate-calculator">hourly rate calculator</a> and
+        <a href="/freelance-service-pricing-calculator">freelance service pricing calculator</a>
+        are specifically designed for freelancers and independent contractors to
+        price packages competitively while meeting income goals.
+      </p>
+    </section>
+
+    <!-- ===============================
+         CTA
+    ================================ -->
+    <section class="calculator-cta">
+      <a class="btn-secondary" href="/service-pricing-guide">
+        Read the Service Pricing Guide
+      </a>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="/assets/js/layout.js" defer></script>
+</body>
+
+</html>

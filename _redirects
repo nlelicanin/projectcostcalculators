@@ -1,0 +1,16 @@
+# ============================
+# Affiliate gateways 
+# ============================
+/go/clickup         https://clickup.com/                     302
+/go/monday          https://monday.com/                     302
+/go/notion          https://www.notion.so/                  302
+
+/go/bonsai          https://www.hellobonsai.com/            302
+/go/freshbooks      https://www.freshbooks.com/            302
+/go/honeybook       https://www.honeybook.com/             302
+
+/go/digitalocean    https://www.digitalocean.com/          302
+/go/cloudways       https://www.cloudways.com/             302
+
+/go/toptal          https://www.toptal.com/                302
+/go/upwork          https://www.upwork.com/                302
