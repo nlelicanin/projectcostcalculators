@@ -57,7 +57,7 @@
   <meta property="og:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:url" content="https://projectcostcalculators.com/about">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About Project Cost Calculators">
@@ -73,7 +73,14 @@
     "name": "About – Project Cost Calculators",
     "url": "https://projectcostcalculators.com/about",
     "description": "About Project Cost Calculators: privacy-first calculators that help you estimate common service costs and pricing ranges based on practical cost drivers.",
-    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" }
+    "inLanguage": "en",
+    "dateModified": "2026-04-12",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
+    "mainEntity": { "@id": "https://projectcostcalculators.com/about#about-faq" },
+    "about": [
+      { "@type": "Thing", "name": "project cost calculators" },
+      { "@type": "Thing", "name": "service cost estimation" }
+    ]
   }
   </script>
 
@@ -89,11 +96,13 @@
   }
   </script>
 
-  <!-- FAQPage (matches visible FAQ below) -->
+  <!-- FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://projectcostcalculators.com/about#about-faq",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/about#webpage" },
     "mainEntity": [
       {
         "@type": "Question",
@@ -142,7 +151,8 @@
     <section class="hero">
       <h1>About Project Cost Calculators</h1>
       <p class="intro">
-        Project Cost Calculators is a set of privacy-first calculators that help you plan budgets and pricing ranges using
+        Project Cost Calculators is a set of privacy-first calculators that help you plan budgets and pricing ranges
+        using
         practical,
         real-world cost drivers.
       </p>
@@ -237,15 +247,18 @@
       <h2>Optional tools we recommend</h2>
       <p>These tools can help you scope work, manage delivery, and send professional proposals.</p>
       <ul>
-        <li><a href="/go/notion" target="_blank" rel="nofollow sponsored noopener noreferrer">Notion</a> — scope and requirements</li>
-        <li><a href="/go/clickup" target="_blank" rel="nofollow sponsored noopener noreferrer">ClickUp</a> — project management</li>
-        <li><a href="/go/bonsai" target="_blank" rel="nofollow sponsored noopener noreferrer">Bonsai</a> — proposals and invoicing</li>
+        <li><a href="/go/notion" target="_blank" rel="nofollow sponsored noopener noreferrer">Notion</a> — scope and
+          requirements</li>
+        <li><a href="/go/clickup" target="_blank" rel="nofollow sponsored noopener noreferrer">ClickUp</a> — project
+          management</li>
+        <li><a href="/go/bonsai" target="_blank" rel="nofollow sponsored noopener noreferrer">Bonsai</a> — proposals and
+          invoicing</li>
       </ul>
       <p class="hub-link">See all: <a href="/recommended-tools">Recommended Tools</a>.</p>
     </section>
 
     <!-- Visible FAQ (matches FAQPage JSON-LD) -->
-    <section class="faq">
+    <section class="faq" id="about-faq">
       <h2>FAQ</h2>
 
       <h3>Are these estimates exact quotes?</h3>

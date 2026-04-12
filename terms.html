@@ -28,7 +28,7 @@
 
   <meta charset="UTF-8">
   <meta name="application-name" content="Project Cost Calculators">
-  <title>Terms of Use – Project Cost Calculators</title>
+  <title>Terms of Use — Project Cost Calculators Site</title>
   <meta name="description"
     content="Terms of Use for Project Cost Calculators. By using this site, you agree to these terms and understand the calculators provide estimates for planning only.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +57,7 @@
   <meta property="og:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:url" content="https://projectcostcalculators.com/terms">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Terms of Use – Project Cost Calculators">
@@ -79,7 +79,10 @@
     "name": "Terms of Use – Project Cost Calculators",
     "url": "https://projectcostcalculators.com/terms",
     "description": "Terms of Use for Project Cost Calculators. By using this site, you agree to these terms and understand the calculators provide estimates for planning only.",
-    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" }
+    "inLanguage": "en",
+    "dateModified": "2026-04-12",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
+    "mainEntity": { "@id": "https://projectcostcalculators.com/terms#terms-faq" }
   }
   </script>
 
@@ -100,6 +103,8 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://projectcostcalculators.com/terms#terms-faq",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/terms#webpage" },
     "mainEntity": [
       {
         "@type": "Question",
@@ -114,15 +119,7 @@
         "name": "Can I copy or reuse the calculators?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You may link to the site and reference results, but you may not copy, reproduce, or republish the site’s content or code without permission."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use the calculators to make business decisions?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Use outputs as planning estimates only. For decisions involving contracts, pricing, or compliance, confirm requirements and get quotes or professional advice from qualified providers."
+          "text": "You may link to the site and reference results, but you may not copy, reproduce, or republish the site's content or code without permission."
         }
       },
       {
@@ -131,6 +128,14 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Email support@projectcostcalculators.com with questions about these terms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use the calculators to make business decisions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use outputs as planning estimates only. For decisions involving contracts, pricing, or compliance, confirm requirements and get quotes or professional advice from qualified providers."
         }
       }
     ]
@@ -184,7 +189,8 @@
     <section>
       <h2>4. Intellectual property</h2>
       <p>
-        Unless otherwise stated, the site content, design, and code are owned by Project Cost Calculators or its licensors
+        Unless otherwise stated, the site content, design, and code are owned by Project Cost Calculators or its
+        licensors
         and are protected by
         applicable intellectual property laws.
       </p>
@@ -233,7 +239,7 @@
     </section>
 
     <!-- Visible FAQ (matches FAQPage JSON-LD) -->
-    <section class="faq">
+    <section class="faq" id="terms-faq">
       <h2>FAQ</h2>
 
       <h3>Can I rely on the estimates as a quote?</h3>

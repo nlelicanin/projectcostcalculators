@@ -3,11 +3,11 @@
 
   <!-- ======================
        Core
-       Updated 2026-03-15 — title, meta, H1, OG type, schema
+       Updated 2026-04-12 — title, H1, meta brand rename, FAQ schema sync
   ======================= -->
   <url>
     <loc>https://projectcostcalculators.com/</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -16,50 +16,50 @@
        Primary Calculators
   ======================= -->
 
-  <!-- Updated 2026-03-15 — title, meta, H1, schema, affiliate heading -->
+  <!-- Updated 2026-04-12 — FAQ schema sync, query phrases, internal links -->
   <url>
     <loc>https://projectcostcalculators.com/project-cost-estimator</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
   </url>
 
-  <!-- Indexed — updated 2026-03-15 — title, meta, schema -->
+  <!-- Updated 2026-04-12 — title, H1, intro phrase, WebPage schema fields -->
   <url>
     <loc>https://projectcostcalculators.com/website-development-cost-estimator</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
-  <!-- Indexed — updated 2026-03-15 — title, meta, schema, FAQ content -->
+  <!-- Updated 2026-04-12 — title, H1, intro phrase, FAQ schema sync, WebPage schema fields -->
   <url>
     <loc>https://projectcostcalculators.com/saas-development-cost-estimator</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
-  <!-- Updated 2026-03-15 — title, meta, schema, intro query injection -->
+  <!-- Updated 2026-04-12 — title, H1, intro keyword stuffing fix, FAQ schema sync, WebPage schema fields -->
   <url>
     <loc>https://projectcostcalculators.com/freelance-service-pricing-calculator</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.87</priority>
   </url>
 
-  <!-- Updated 2026-03-15 — title, meta, schema, FAQ H2 -->
+  <!-- Updated 2026-04-12 — title, H1, rate benchmark table, FAQ schema sync, internal links -->
   <url>
     <loc>https://projectcostcalculators.com/service-hourly-rate-calculator</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.87</priority>
   </url>
 
-  <!-- Updated 2026-03-15 — title, meta, schema, FAQ H2 -->
+  <!-- Updated 2026-04-12 — title, H1, intro phrase, FAQ answer expanded, WebPage schema fields -->
   <url>
     <loc>https://projectcostcalculators.com/website-maintenance-cost-estimator</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -68,18 +68,18 @@
        Educational / Hub
   ======================= -->
 
-  <!-- Updated 2026-03-15 — title, meta, schema, FAQ syntax fix -->
+  <!-- Updated 2026-04-12 — H1, cost drivers table, FAQ schema @id fix, WebPage schema fields -->
   <url>
     <loc>https://projectcostcalculators.com/service-pricing-guide</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
-  <!-- Updated 2026-03-15 — title, meta, schema, title/H1 mismatch fixed, CTA block fixed -->
+  <!-- Updated 2026-04-12 — H1, overhead/profit/support sections expanded, FAQ schema @id fix, CSS fix -->
   <url>
     <loc>https://projectcostcalculators.com/service-cost-breakdown</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.72</priority>
   </url>
@@ -88,10 +88,10 @@
        Affiliate / Monetization
   ======================= -->
 
-  <!-- Updated 2026-03-15 — title, H1, schema, duplicate links removed -->
+  <!-- Updated 2026-04-12 — H1, Article schema added, FAQPage schema @id fix -->
   <url>
     <loc>https://projectcostcalculators.com/recommended-tools</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
@@ -99,37 +99,43 @@
   <!-- ======================
        Trust & Info
   ======================= -->
+
+  <!-- Updated 2026-04-12 — FAQPage schema @id fix, WebPage schema fields, og:type fix -->
   <url>
     <loc>https://projectcostcalculators.com/about</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
 
+  <!-- Updated 2026-04-12 — title, meta, broken anchor fix, FAQPage schema @id fix -->
   <url>
     <loc>https://projectcostcalculators.com/contact</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.40</priority>
   </url>
 
+  <!-- Updated 2026-04-12 — title, FAQPage schema @id fix, WebPage schema fields -->
   <url>
     <loc>https://projectcostcalculators.com/privacy</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
 
+  <!-- Updated 2026-04-12 — title, FAQPage schema @id + order fix, WebPage schema fields -->
   <url>
     <loc>https://projectcostcalculators.com/terms</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
 
+  <!-- Updated 2026-04-12 — title, FAQPage schema @id + order fix, WebPage schema fields -->
   <url>
     <loc>https://projectcostcalculators.com/disclaimer</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
@@ -137,9 +143,11 @@
   <!-- ======================
        HTML Sitemap
   ======================= -->
+
+  <!-- Updated 2026-04-12 — title, meta, og:type fix, WebPage schema fields -->
   <url>
     <loc>https://projectcostcalculators.com/sitemap</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.20</priority>
   </url>

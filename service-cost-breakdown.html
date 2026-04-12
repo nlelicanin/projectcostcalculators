@@ -72,11 +72,18 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://projectcostcalculators.com/service-cost-breakdown#webpage",
-    "name": "Service Cost Breakdown – What You’re Paying For",
+    "name": "Service Cost Breakdown – What You're Paying For",
     "url": "https://projectcostcalculators.com/service-cost-breakdown",
     "description": "A practical breakdown of what drives service pricing: labor, overhead, tools, risk, management, profit, and ongoing support—plus how to estimate fair ranges.",
-    "dateModified": "2026-03-15",
-    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" }
+    "inLanguage": "en",
+    "dateModified": "2026-04-12",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
+    "mainEntity": { "@id": "https://projectcostcalculators.com/service-cost-breakdown#faq" },
+    "about": [
+      { "@type": "Thing", "name": "service cost breakdown" },
+      { "@type": "Thing", "name": "service pricing explained" },
+      { "@type": "Thing", "name": "project cost components" }
+    ]
   }
   </script>
 
@@ -115,7 +122,7 @@
       "@id": "https://projectcostcalculators.com/service-cost-breakdown#webpage"
     },
     "datePublished": "2026-01-10",
-    "dateModified": "2026-03-15",
+    "dateModified": "2026-04-12",
     "image": "https://projectcostcalculators.com/assets/images/og-image.png",
     "author": {
       "@type": "Organization",
@@ -141,7 +148,7 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": "https://projectcostcalculators.com/service-cost-breakdown#faq",
+    "@id": "https://projectcostcalculators.com/service-cost-breakdown#cost-breakdown-faq",
     "isPartOf": { "@id": "https://projectcostcalculators.com/service-cost-breakdown#webpage" },
     "mainEntity": [
       {
@@ -189,7 +196,7 @@
   <main class="container">
 
     <section class="hero">
-      <h1>Service Cost Breakdown</h1>
+      <h1>Service Cost Breakdown: What You're Actually Paying For</h1>
       <p class="intro">
         If you’ve ever wondered why two quotes for the “same” service can look wildly different, this page explains the
         pricing building blocks — in plain language. Use it to sanity-check estimates before you hire.
@@ -291,6 +298,42 @@
         <li><strong>Quality expectations:</strong> QA, documentation, accessibility, and security add time.</li>
       </ul>
 
+      <table>
+        <thead>
+          <tr>
+            <th>Experience tier</th>
+            <th>Typical hourly rate (US, 2026)</th>
+            <th>What you get</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Junior / entry-level</strong></td>
+            <td>$25–$55/hr</td>
+            <td>Executes defined tasks; needs more oversight and review.</td>
+          </tr>
+          <tr>
+            <td><strong>Mid-level</strong></td>
+            <td>$55–$120/hr</td>
+            <td>Works independently on standard projects; some mentoring.</td>
+          </tr>
+          <tr>
+            <td><strong>Senior / specialist</strong></td>
+            <td>$120–$250+/hr</td>
+            <td>Handles complex problems, architecture decisions, risk.</td>
+          </tr>
+          <tr>
+            <td><strong>Agency blended rate</strong></td>
+            <td>$100–$300+/hr</td>
+            <td>Mix of seniority levels; includes PM and process overhead.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="hint">
+        The same outcome can require 2–5× more hours from a junior vs senior provider —
+        so a lower rate doesn't always mean a lower total cost.
+      </p>
+
       <p class="hub-link">
         Want an hourly sanity check? Try the
         <a href="/service-hourly-rate-calculator">Service Hourly Rate Calculator</a>.
@@ -298,14 +341,54 @@
     </section>
 
     <section id="overhead">
-      <h2>Overhead: what clients often forget they’re paying for</h2>
+      <h2>Overhead: what clients often forget they're paying for</h2>
       <p>
-        Overhead is the “invisible” cost of running a professional operation — scheduling, invoicing, support,
+        Overhead is the "invisible" cost of running a professional operation — scheduling, invoicing, support,
         insurance, taxes, and time spent not directly billable to your project.
       </p>
       <p>
         A low quote can be legitimate — or it can indicate corners being cut (no QA, no documentation, minimal support,
         unclear terms).
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Overhead type</th>
+            <th>What it includes</th>
+            <th>Who carries it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Administrative</strong></td>
+            <td>Invoicing, contracts, scheduling, client communication.</td>
+            <td>All providers</td>
+          </tr>
+          <tr>
+            <td><strong>Legal & insurance</strong></td>
+            <td>Liability coverage, professional indemnity, contract review.</td>
+            <td>Agencies more than freelancers</td>
+          </tr>
+          <tr>
+            <td><strong>Sales & marketing</strong></td>
+            <td>Time spent finding clients, proposals, networking.</td>
+            <td>All providers — often 15–30% of working time</td>
+          </tr>
+          <tr>
+            <td><strong>Training & R&D</strong></td>
+            <td>Staying current with tools, platforms, and best practices.</td>
+            <td>Technical providers especially</td>
+          </tr>
+          <tr>
+            <td><strong>Non-billable project time</strong></td>
+            <td>Internal reviews, miscommunication fixes, context switching.</td>
+            <td>All providers</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="hint">
+        Freelancers typically run 20–35% overhead as a share of revenue.
+        Agencies run higher — often 40–60% — due to staff, premises, and process.
       </p>
     </section>
 
@@ -399,11 +482,12 @@
       </ul>
       <div class="primary-tool">
         <span class="primary-tool__label">Next step</span>
-        <p class="primary-tool__title">
+        <h3 class="primary-tool__title">
           <a href="/service-pricing-guide">Compare quotes with a 5-minute checklist</a>
-        </p>
+        </h3>
         <p class="primary-tool__description">
-          Use the Service Pricing Guide to compare deliverables, assumptions, revision limits, support terms, and exclusions.
+          Use the Service Pricing Guide to compare deliverables, assumptions, revision limits, support terms, and
+          exclusions.
         </p>
       </div>
     </section>
@@ -426,21 +510,90 @@
     </section>
 
     <section id="profit">
-      <h2>Profit: not a “markup,” but a survival requirement</h2>
+      <h2>Profit: not a "markup," but a survival requirement</h2>
       <p>
         Healthy providers need margin to invest in staff, tooling, and training — and to absorb surprises without
         abandoning projects. Extremely low margins often lead to unstable delivery.
       </p>
+      <p>
+        Most sustainable freelancers and agencies target 15–30% net profit margin on project work.
+        Lower than that, and a few scope changes or delayed payments can make a project unprofitable.
+        Higher margins are common for specialist or high-demand services where delivery risk is also higher.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Provider type</th>
+            <th>Typical target margin</th>
+            <th>Why it varies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Freelancer</strong></td>
+            <td>15–30%</td>
+            <td>Lower overhead but absorbs all risk personally.</td>
+          </tr>
+          <tr>
+            <td><strong>Small agency</strong></td>
+            <td>20–35%</td>
+            <td>Staff costs and coordination increase overhead.</td>
+          </tr>
+          <tr>
+            <td><strong>Full-service agency</strong></td>
+            <td>25–45%</td>
+            <td>Higher overhead, brand premium, and risk capacity.</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section id="support">
       <h2>Ongoing support: the difference between a project and a relationship</h2>
       <p>
-        Many services don’t end at delivery. Maintenance, monitoring, updates, and support can be a major part of total
-        cost over time.
+        Many services don't end at delivery. Maintenance, monitoring, updates, and support can be a major part of total
+        cost over time — often adding 15–25% of the original build cost annually.
       </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Support type</th>
+            <th>What it covers</th>
+            <th>Typical cost signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bug fixes & patches</strong></td>
+            <td>Fixing issues that emerge post-launch.</td>
+            <td>Usually included short-term, charged after.</td>
+          </tr>
+          <tr>
+            <td><strong>Security updates</strong></td>
+            <td>Dependency updates, vulnerability patches, access reviews.</td>
+            <td>Monthly retainer or hourly.</td>
+          </tr>
+          <tr>
+            <td><strong>Performance monitoring</strong></td>
+            <td>Uptime, load times, error tracking.</td>
+            <td>Tool cost + occasional intervention.</td>
+          </tr>
+          <tr>
+            <td><strong>Content & feature updates</strong></td>
+            <td>New pages, copy changes, feature additions.</td>
+            <td>Hourly or retainer depending on frequency.</td>
+          </tr>
+          <tr>
+            <td><strong>SLA / response time</strong></td>
+            <td>Guaranteed response or fix windows.</td>
+            <td>Premium — significant cost increase for tight SLAs.</td>
+          </tr>
+        </tbody>
+      </table>
       <p class="hub-link">
-        Start with your project estimate:
+        Estimate ongoing costs with the
+        <a href="/website-maintenance-cost-estimator">Website Maintenance Cost Estimator</a>.
+        Start with your initial project estimate:
         <a href="/project-cost-estimator">Project Cost Estimator</a>.
       </p>
     </section>
@@ -462,7 +615,7 @@
 
     <!-- Visible FAQ (matches FAQPage JSON-LD) -->
     <section class="faq" id="cost-breakdown-faq">
-       <h2>Service cost breakdown: common questions</h2>
+      <h2>Service cost breakdown: common questions</h2>
 
       <h3>Why are service estimates ranges instead of exact numbers?</h3>
       <p>

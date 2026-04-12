@@ -28,9 +28,9 @@
 
   <meta charset="UTF-8">
   <meta name="application-name" content="Project Cost Calculators">
-  <title>Disclaimer – Project Cost Calculators</title>
+  <title>Disclaimer — Project Cost Calculators Estimates</title>
   <meta name="description"
-    content="Disclaimer for Project Cost Calculators: estimates are for planning only and are not quotes, advice, or guarantees.">
+    content="Disclaimer for Project Cost Calculators: all estimates are planning ranges only, not quotes, advice, or guarantees from any provider.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -56,7 +56,7 @@
   <meta property="og:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:url" content="https://projectcostcalculators.com/disclaimer">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Disclaimer – Project Cost Calculators">
@@ -77,7 +77,10 @@
     "name": "Disclaimer – Project Cost Calculators",
     "url": "https://projectcostcalculators.com/disclaimer",
     "description": "Disclaimer for Project Cost Calculators: estimates are for planning only and are not quotes, advice, or guarantees.",
-    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" }
+    "inLanguage": "en",
+    "dateModified": "2026-04-12",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
+    "mainEntity": { "@id": "https://projectcostcalculators.com/disclaimer#disclaimer-faq" }
   }
   </script>
 
@@ -98,6 +101,8 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://projectcostcalculators.com/disclaimer#disclaimer-faq",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/disclaimer#webpage" },
     "mainEntity": [
       {
         "@type": "Question",
@@ -117,18 +122,18 @@
       },
       {
         "@type": "Question",
-        "name": "Can I share these estimates with a provider?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. You can share the estimate as a starting point for discussion, but providers will still quote based on your specific scope, requirements, and timeline."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "How should I use these estimates?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Use the estimates to plan a budget and compare options, then request proposals or quotes from qualified providers for your specific requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I share these estimates with a provider?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can share the estimate as a starting point for discussion, but providers will still quote based on your specific scope, requirements, and timeline."
         }
       }
     ]
@@ -213,7 +218,7 @@
     </section>
 
     <!-- Visible FAQ (matches FAQPage JSON-LD) -->
-    <section class="faq">
+    <section class="faq" id="disclaimer-faq">
       <h2>FAQ</h2>
 
       <h3>Are the calculator results quotes or guarantees?</h3>

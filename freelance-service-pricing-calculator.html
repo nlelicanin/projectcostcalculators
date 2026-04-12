@@ -28,7 +28,7 @@
 
   <meta charset="UTF-8">
   <meta name="application-name" content="Project Cost Calculators">
-  <title>Service Pricing Calculator for Freelancers — Free Tool</title>
+  <title>Freelance Service Pricing Calculator — Price Any Project</title>
   <meta name="description"
     content="Free service pricing calculator for freelancers. Enter hours, rate, overhead, and margin to price any project or package instantly. No signup, no data stored.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,9 +73,15 @@
     "name": "Freelance Service Pricing Calculator – Price a Project or Package",
     "url": "https://projectcostcalculators.com/freelance-service-pricing-calculator",
     "description": "Estimate a realistic freelance project or package price based on estimated hours, hourly rate, overhead, risk buffer, and profit margin.",
-    "dateModified": "2026-03-15",
+    "inLanguage": "en",
+    "dateModified": "2026-04-12",
     "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
-    "mainEntity": { "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#faq" }
+    "mainEntity": { "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#faq" },
+    "about": [
+      { "@type": "Thing", "name": "freelance service pricing" },
+      { "@type": "Thing", "name": "freelance cost estimator" },
+      { "@type": "Thing", "name": "project pricing calculator" }
+    ]
   }
   </script>
 
@@ -136,7 +142,7 @@
         "name": "How do I include overhead in a project price?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Overhead includes tools, software, insurance, taxes, admin time, and marketing. A simple approach is to add a per-project overhead allocation based on how much of your yearly overhead this project should cover."
+          "text": "Overhead includes tools, software, insurance, taxes, admin time, and marketing. A simple approach is to add a per-project overhead allocation based on how much of your yearly overhead this project should cover. For a deeper explanation of what actually drives pricing, see the Service Cost Breakdown."
         }
       },
       {
@@ -160,13 +166,13 @@
   <main class="container">
 
     <section class="hero">
-      <h1>Freelance Service Pricing Calculator</h1>
+      <h1>Freelance Service Pricing Calculator — Price Any Project or Package</h1>
       <p class="intro">
-        Use this <strong>service pricing calculator</strong> to price any freelance <strong>project or service
+        Use this <strong>freelance cost estimator</strong> to price any <strong>project or service
           package</strong> using hours, rate, overhead, a risk buffer, and
         profit margin. Most freelance packages range from <strong>$500 for small deliverables</strong> to
-        <strong>$50,000+ for complex engagements</strong> — use this <strong>service pricing calculator</strong>
-        to find the right price for your scope. Results update instantly. No data stored.
+        <strong>$50,000+ for complex engagements</strong> — adjust the inputs to find the right price for your scope.
+        Results update instantly. No data stored.
       </p>
     </section>
 
@@ -236,6 +242,41 @@
       <p>
         Then it applies your <strong>profit margin target</strong> so the final number supports growth and non-billable
         time.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Input</th>
+            <th>What it does to the price</th>
+            <th>Typical starting value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hours × Rate</strong></td>
+            <td>Sets the base cost floor — the minimum viable price.</td>
+            <td>Varies by role and market</td>
+          </tr>
+          <tr>
+            <td><strong>Risk buffer</strong></td>
+            <td>Adds a multiplier for scope uncertainty and revision risk.</td>
+            <td>10–20% for most projects</td>
+          </tr>
+          <tr>
+            <td><strong>Overhead</strong></td>
+            <td>Flat addition covering tools, admin, insurance, marketing.</td>
+            <td>$150–$500 per project</td>
+          </tr>
+          <tr>
+            <td><strong>Profit margin</strong></td>
+            <td>Applied last — ensures growth and absorbs surprises.</td>
+            <td>20% is a common starting target</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="hint">
+        Adjust risk buffer first if your quotes keep running over — it's the most common
+        underpricing lever for freelancers.
       </p>
     </section>
 

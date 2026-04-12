@@ -28,7 +28,7 @@
 
   <meta charset="UTF-8">
   <meta name="application-name" content="Project Cost Calculators">
-  <title>Privacy Policy – Project Cost Calculators</title>
+  <title>Privacy Policy — Project Cost Calculators Site</title>
   <meta name="description"
     content="Privacy Policy for Project Cost Calculators. Calculations run locally in your browser. We do not store calculator inputs. Learn what data is collected and how it’s used.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +57,7 @@
   <meta property="og:image" content="https://projectcostcalculators.com/assets/images/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:url" content="https://projectcostcalculators.com/privacy">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Privacy Policy – Project Cost Calculators">
@@ -74,7 +74,10 @@
     "name": "Privacy Policy – Project Cost Calculators",
     "url": "https://projectcostcalculators.com/privacy",
     "description": "Privacy Policy for Project Cost Calculators. Calculations run locally in your browser. We do not store calculator inputs.",
-    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" }
+    "inLanguage": "en",
+    "dateModified": "2026-04-12",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
+    "mainEntity": { "@id": "https://projectcostcalculators.com/privacy#privacy-faq" }
   }
   </script>
 
@@ -95,6 +98,8 @@
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://projectcostcalculators.com/privacy#privacy-faq",
+    "isPartOf": { "@id": "https://projectcostcalculators.com/privacy#webpage" },
     "mainEntity": [
       {
         "@type": "Question",
@@ -234,12 +239,13 @@
       <h2>Contact</h2>
       <p>
         For privacy questions, email
-        <a href="mailto:support@projectcostcalculators.com?subject=Privacy%20question%20(ProjectCostCalculators.com)">support@projectcostcalculators.com</a>.
+        <a
+          href="mailto:support@projectcostcalculators.com?subject=Privacy%20question%20(ProjectCostCalculators.com)">support@projectcostcalculators.com</a>.
       </p>
     </section>
 
     <!-- Visible FAQ (matches FAQPage JSON-LD) -->
-    <section class="faq">
+    <section class="faq" id="privacy-faq">
       <h2>FAQ</h2>
 
       <h3>Do you store any calculator inputs?</h3>
@@ -260,7 +266,8 @@
       </p>
 
       <h3>How can I contact you about privacy?</h3>
-      <p>Email <a href="mailto:support@projectcostcalculators.com">support@projectcostcalculators.com</a> with your privacy
+      <p>Email <a href="mailto:support@projectcostcalculators.com">support@projectcostcalculators.com</a> with your
+        privacy
         question.</p>
 
       <div class="faq-cta">
