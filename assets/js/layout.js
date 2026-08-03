@@ -71,9 +71,10 @@
     "terms":                                { header: "none", footer: "none" },
 
     // ── Consulting-flavored project pages ──
-    "service-pricing-guide":                { header: "lawdepot-consulting", footer: "lawdepot-ica" },
-    "saas-development-cost-estimator":      { header: "lawdepot-consulting", footer: "lawdepot-ica" },
-    "website-development-cost-estimator":   { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+    "service-pricing-guide":                 { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+    "saas-development-cost-estimator":       { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+    "website-development-cost-estimator":    { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+    "mobile-app-development-cost-estimator": { header: "lawdepot-consulting", footer: "lawdepot-ica" },
 
     // ── Everything else -- sitewide default (broadest fit: IC agreement) ──
     "freelance-service-pricing-calculator": { header: "lawdepot-ica", footer: "justanswer-business" },
@@ -158,6 +159,9 @@
     // --- Premium lead-value / marketplaces ---
     "toptal":   { partner: "toptal",      category: "talent_marketplace", text: "Toptal (hire vetted talent)" },
     "upwork":   { partner: "upwork",      category: "talent_marketplace", text: "Upwork (hire freelancers)" },
+
+    // --- No-code / low-code builders ---
+    "adalo":    { partner: "adalo",       category: "no_code_app_builder", text: "Adalo (no-code mobile app builder)" },
 
     // --- Highlight panel offers
     "lawdepot-ica":         { partner: "lawdepot",   category: "legal_documents", text: "LawDepot — Independent Contractor Agreement" },

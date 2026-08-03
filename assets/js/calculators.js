@@ -52,15 +52,16 @@
 
     /**
      * Base ranges (USD) for a "medium / medium / flexible / smallAgency" starting point.
-     * These are intentionally conservative planning ranges.
-     * We'll refine later per niche page (website, SaaS, etc.).
+     * Calibrated to match the "Medium Scope" column of the typical-cost-ranges
+     * table above (.authority section) so the calculator's default output and
+     * the static benchmarks agree. Updated 2026-08 — see SEO review K2 fix.
      */
     const BASE_RANGES = {
-      website:    { min: 2500,  max: 12000 },
-      saas:       { min: 12000, max: 60000 },
-      freelance:  { min: 600,   max: 6000 },
-      consulting: { min: 800,   max: 8000 },
-      other:      { min: 1000,  max: 15000 }
+      website:    { min: 5000,  max: 25000 },
+      saas:       { min: 30000, max: 100000 },
+      freelance:  { min: 2500,  max: 10000 },
+      consulting: { min: 5000,  max: 20000 },
+      other:      { min: 3000,  max: 15000 }
     };
 
     // Multipliers for scope
@@ -167,11 +168,14 @@
 
     /**
      * Base ranges for a "business site / 6-15 pages / medium / some integrations / flexible / smallAgency"
-     * Conservative planning ranges (USD)
+     * Conservative planning ranges (USD). Marketing/business recalibrated to match the
+     * hero copy's stated bands ($1,000-$5,000 marketing, $5,000-$25,000 business) —
+     * see SEO review K2 fix, same pattern as the Project Cost Estimator. Content,
+     * ecommerce, and webapp were already consistent with the copy and are unchanged.
      */
     const BASE_RANGES = {
-      marketing: { min: 900,  max: 4500 },
-      business:  { min: 2500, max: 12000 },
+      marketing: { min: 1000, max: 5000 },
+      business:  { min: 5000, max: 25000 },
       content:   { min: 1800, max: 9000 },
       ecommerce: { min: 6000, max: 30000 },
       webapp:    { min: 9000, max: 45000 }
@@ -281,11 +285,16 @@
     /**
      * Base ranges (USD per month) for:
      * "business / monthly / basic / standard security / smallAgency"
-     * Conservative planning ranges.
+     * Marketing/business recalibrated to match the FAQ's explicit stated bands
+     * ($50-$200/mo marketing, $200-$500/mo business) — see SEO review K2 fix.
+     * Content/ecommerce/webapp unchanged: the FAQ only gives one combined,
+     * unsplit claim for ecommerce+webapp ($500-$3,000+/mo), so picking a
+     * specific split between the two would mean inventing numbers the page
+     * doesn't actually state anywhere.
      */
     const BASE_RANGES = {
-      marketing: { min: 75,  max: 300 },
-      business:  { min: 150, max: 650 },
+      marketing: { min: 50,  max: 200 },
+      business:  { min: 200, max: 500 },
       content:   { min: 120, max: 550 },
       ecommerce: { min: 350, max: 1400 },
       webapp:    { min: 500, max: 2500 }
@@ -391,12 +400,15 @@
     /**
      * Base ranges (USD) for:
      * "MVP / medium scope / medium complexity / some integrations / flexible / smallAgency"
-     * Conservative planning ranges.
+     * Production recalibrated to match the FAQ's explicit claim that production-ready
+     * builds "typically exceed $100,000" - the old floor of $30,000 directly contradicted
+     * that at default settings. See SEO review K2 fix. Prototype/mvp unchanged - no
+     * explicit page claim contradicts their current defaults.
      */
     const BASE_RANGES = {
       prototype: { min: 6000,  max: 25000 },
       mvp:       { min: 12000, max: 60000 },
-      production:{ min: 30000, max: 150000 }
+      production:{ min: 100000, max: 250000 }
     };
 
     const SCOPE_MULT = {
@@ -681,6 +693,120 @@
     }
   };
 
+  /* ===============================
+     Mobile App Development Cost Estimator
+     Page: /mobile-app-development-cost-estimator
+  ================================ */
+
+  CostTools.calculateMobileAppDevelopmentCost = function () {
+    const stageEl = document.getElementById("maStage");
+    const platformEl = document.getElementById("maPlatform");
+    const complexityEl = document.getElementById("maComplexity");
+    const urgencyEl = document.getElementById("maUrgency");
+    const providerEl = document.getElementById("maProvider");
+    const resultEl = document.getElementById("mobileAppResult");
+
+    if (!stageEl || !platformEl || !complexityEl || !urgencyEl || !providerEl || !resultEl) {
+      return;
+    }
+
+    const stage = stageEl.value;
+    const platform = platformEl.value;
+    const complexity = complexityEl.value;
+    const urgency = urgencyEl.value;
+    const provider = providerEl.value;
+
+    /**
+     * Base ranges (USD) for:
+     * "MVP / cross-platform / moderate complexity / flexible / smallAgency"
+     * Industry-standard planning ranges - please review against your own
+     * data before publishing; app dev costs vary more by region/vendor
+     * than web or SaaS dev costs.
+     */
+    const BASE_RANGES = {
+      prototype: { min: 8000, max: 30000 },
+      mvp: { min: 20000, max: 80000 },
+      production: { min: 60000, max: 250000 }
+    };
+
+    // Building natively for both platforms means duplicating most of the
+    // work, not simply doubling it (shared design/backend/QA planning) -
+    // hence 1.7x rather than 2x. Single-platform native is cheaper than
+    // cross-platform since there's no cross-platform framework overhead
+    // or compatibility testing across two rendering engines.
+    const PLATFORM_MULT = {
+      ios: 0.65,
+      android: 0.65,
+      both: 1.7,
+      crossplatform: 1.0
+    };
+
+    const COMPLEXITY_MULT = {
+      simple: 0.7,
+      moderate: 1.0,
+      complex: 1.8
+    };
+
+    const URGENCY_MULT = {
+      flexible: 1.0,
+      standard: 1.12,
+      rush: 1.3
+    };
+
+    const PROVIDER_MULT = {
+      freelancer: 0.85,
+      smallAgency: 1.0,
+      agency: 1.25
+    };
+
+    const base = BASE_RANGES[stage] || BASE_RANGES.mvp;
+
+    const platformM = PLATFORM_MULT[platform] ?? 1.0;
+    const complexM = COMPLEXITY_MULT[complexity] ?? 1.0;
+    const urgencyM = URGENCY_MULT[urgency] ?? 1.0;
+    const providerM = PROVIDER_MULT[provider] ?? 1.0;
+
+    let estMin = Math.round(base.min * platformM * complexM * urgencyM * providerM);
+    let estMax = Math.round(base.max * platformM * complexM * urgencyM * providerM);
+
+    if (estMax < estMin) [estMin, estMax] = [estMax, estMin];
+
+    const minSpread = Math.max(1500, Math.round(estMin * 0.28));
+    if (estMax - estMin < minSpread) estMax = estMin + minSpread;
+
+    estMin = CostTools.clamp(estMin, 0, 5_000_000);
+    estMax = CostTools.clamp(estMax, 0, 5_000_000);
+
+    const rangeText = CostTools.formatCurrencyRangeUSD(estMin, estMax);
+
+    const drivers = [];
+    if (stage === "prototype") drivers.push("prototype stage");
+    if (stage === "production") drivers.push("production-ready build");
+    if (platform === "both") drivers.push("native iOS + Android");
+    if (platform === "ios") drivers.push("iOS only");
+    if (platform === "android") drivers.push("Android only");
+    if (complexity === "simple") drivers.push("simple feature set");
+    if (complexity === "complex") drivers.push("higher complexity (real-time, payments, or heavy integrations)");
+    if (urgency === "standard") drivers.push("fixed deadline");
+    if (urgency === "rush") drivers.push("rush timeline");
+    if (provider === "freelancer") drivers.push("freelancer pricing");
+    if (provider === "agency") drivers.push("agency overhead");
+
+    const driverLine = drivers.length
+      ? `This estimate reflects: <strong>${drivers.join(", ")}</strong>.`
+      : `This estimate uses typical assumptions for a cross-platform MVP.`;
+
+    resultEl.innerHTML = `
+      <strong>Estimated mobile app development cost range:</strong><br>
+      <span style="font-size:1.15rem; font-weight:800;">${rangeText}</span>
+      <p style="margin:10px 0 0;">${driverLine}</p>
+      <p style="margin:10px 0 0;">
+        Planning a web app instead? See the
+        <a href="/saas-development-cost-estimator">SaaS Development Cost Estimator</a>.
+      </p>
+    `;
+  };
+
 
 
 
@@ -767,6 +893,18 @@
             el.addEventListener("change", handler);
             el.addEventListener("input", handler);
           });
+          handler();
+        }
+        break;
+      }
+
+      case "mobile-app-development-cost-estimator": {
+        const ids = ["maStage", "maPlatform", "maComplexity", "maUrgency", "maProvider"];
+        const els = ids.map((id) => document.getElementById(id));
+
+        if (els.every(Boolean)) {
+          const handler = () => CostTools.calculateMobileAppDevelopmentCost();
+          els.forEach((el) => el.addEventListener("change", handler));
           handler();
         }
         break;

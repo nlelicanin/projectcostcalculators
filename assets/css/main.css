@@ -975,17 +975,18 @@ a.shop-chip {
   min-height: 44px;
   padding: 8px 16px;
   border-radius: 10px;
-  background-color: #1a73e8;
-  color: #fff;
+  background: #fff;
+  color: #1a73e8;
   font-weight: 600;
   font-size: 0.9rem;
   line-height: 1.2;
   text-decoration: none !important;
   white-space: nowrap;
+  border: 1px solid #1a73e8;
 }
 
 a.shop-chip:hover {
-  background-color: #1666c1;
+  background: #f1f5ff;
 }
 
 /* Compact mid-sentence variant -- not used by the highlight panel today
