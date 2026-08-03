@@ -159,8 +159,7 @@
     "toptal":   { partner: "toptal",      category: "talent_marketplace", text: "Toptal (hire vetted talent)" },
     "upwork":   { partner: "upwork",      category: "talent_marketplace", text: "Upwork (hire freelancers)" },
 
-    // --- Highlight panel offers (header/footer only -- see
-    // /partials/highlight-content.html) ---
+    // --- Highlight panel offers
     "lawdepot-ica":         { partner: "lawdepot",   category: "legal_documents", text: "LawDepot — Independent Contractor Agreement" },
     "lawdepot-consulting":  { partner: "lawdepot",   category: "legal_documents", text: "LawDepot — Consulting Agreement" },
     "justanswer-business":  { partner: "justanswer", category: "legal_advice",    text: "JustAnswer — Ask a Business Lawyer" }
