@@ -1,6 +1,3 @@
-# ============================
-# Affiliate gateways 
-# ============================
 /go/clickup         https://clickup.com/                     302
 /go/monday          https://monday.com/                     302
 /go/notion          https://www.notion.so/                  302
@@ -14,3 +11,11 @@
 
 /go/toptal          https://www.toptal.com/                302
 /go/upwork          https://www.upwork.com/                302
+
+
+# ---- LawDepot ----
+/go/lawdepot-ica              https://www.kqzyfj.com/click-101729194-16987686?url=https%3A%2F%2Fwww.lawdepot.com%2Fus%2Fbusiness%2Findependent-contractor-agreement%2F  302
+/go/lawdepot-consulting       https://www.anrdoezrs.net/click-101729194-16987686?url=https%3A%2F%2Fwww.lawdepot.com%2Fus%2Fbusiness%2Fconsulting-agreement%2F           302
+
+# ---- JustAnswer ----
+/go/justanswer-business       https://justanswer.9pctbx.net/DWJyma       302

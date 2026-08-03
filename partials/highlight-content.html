@@ -1,0 +1,46 @@
+<!-- Every product pitch lives here as a tagged <div>. Editing copy or
+     adding a variant never touches header.html, footer.html, or layout.js
+     -- only this file and the HIGHLIGHT_CONTEXT_MAP entries in layout.js
+     that reference a given data-variant key.
+
+     renderHighlight() (layout.js) copies only the INNER html of the
+     matched block into .highlight-slot -- so .highlight-text and the
+     chip link below MUST stay siblings, both direct children of
+     .highlight-variant, NOT nested one inside the other.
+     .header-highlight__inner / .footer-highlight__inner are flex
+     containers and their `gap` only applies BETWEEN flex items. -->
+
+<!-- LawDepot: Independent Contractor Agreement -- sitewide default HEADER
+     pitch. Broadest fit on this site: almost everyone using a freelance/
+     service pricing calculator is themselves an independent contractor. -->
+<div class="highlight-variant" data-variant="lawdepot-ica">
+  <p class="highlight-text">🖊️ <span class="shop-mark">Working as an independent contractor?</span> Get a state-specific agreement in minutes.</p>
+  <a href="/go/lawdepot-ica" class="shop-chip" target="_blank" rel="nofollow sponsored noopener"
+     data-affiliate-text="LawDepot Independent Contractor Agreement (highlight)">
+    Create contractor agreement<span class="shop-ext">↗</span>
+  </a>
+</div>
+
+<!-- LawDepot: Consulting Agreement -- header pitch on the higher-end
+     consulting/dev project pages (pricing guide, SaaS dev, website dev). -->
+<div class="highlight-variant" data-variant="lawdepot-consulting">
+  <p class="highlight-text">📄 <span class="shop-mark">Pricing out a bigger project?</span> Get a consulting agreement before you start.</p>
+  <a href="/go/lawdepot-consulting" class="shop-chip" target="_blank" rel="nofollow sponsored noopener"
+     data-affiliate-text="LawDepot Consulting Agreement (highlight)">
+    Create consulting agreement<span class="shop-ext">↗</span>
+  </a>
+</div>
+
+<!-- JustAnswer: Business -- sitewide default FOOTER pitch, and the footer
+     pitch on the consulting-flavored pages. -->
+<div class="highlight-variant" data-variant="justanswer-business">
+  <p class="highlight-text">⚖️ <span class="shop-mark">Not sure how to structure the deal?</span> Ask a business lawyer directly.</p>
+  <a href="/go/justanswer-business" class="shop-chip" target="_blank" rel="nofollow sponsored noopener"
+     data-affiliate-text="JustAnswer Ask a Business Lawyer (highlight)">
+    Ask a lawyer<span class="shop-ext">↗</span>
+  </a>
+</div>
+
+<!-- Do NOT add a block for a "none" variant -- renderHighlight() hides
+     the whole box for that case instead of loading empty content. See
+     layout.js. -->

@@ -2,6 +2,8 @@
  * layout.js — ProjectCostCalculators.com
  * - Loads header/footer partials
  * - Sets footer year
+ * - Renders the contextual header/footer highlight panel (see
+ *   renderHighlight() below) from /partials/highlight-content.html
  * - Privacy-friendly GA enablement (analytics_storage granted after first interaction)
  * - Tracks affiliate gateway clicks (/go/*) as GA4 event: affiliate_click
  *   with helpful parameters for reporting:
@@ -27,13 +29,91 @@
   }
 
   // Load header
-  loadPartial("header", "/partials/header.html");
+  loadPartial("header", "/partials/header.html", function () {
+    renderHighlight("header");
+  });
 
   // Load footer and set year
   loadPartial("footer", "/partials/footer.html", function () {
     const yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    renderHighlight("footer");
   });
+
+  /* ===============================
+     Highlight panel -- contextual header/footer product pitch
+     - Reads <body data-highlight-page="..."> and looks it up in
+       HIGHLIGHT_CONTEXT_MAP.
+     - Injects the matching variant from /partials/highlight-content.html
+       into the header and footer independently (they can show different
+       pitches on the same page). Header carries the higher-ROI / unique
+       pitch; footer carries the safe default -- header is the more
+       visible slot.
+     - "none" hides the WHOLE box, not just the inner content -- an empty
+       styled/bordered box looks broken, not neutral.
+  ================================ */
+
+  const HIGHLIGHT_DEFAULT = { header: "lawdepot-ica", footer: "justanswer-business" };
+
+  // Every page from html-files.txt listed explicitly (17 total), even the
+  // ones using the plain default for both slots -- so any single page's
+  // pitch can be hand-edited later without needing to understand the
+  // fallback mechanism. HIGHLIGHT_DEFAULT still exists as a safety net for
+  // any future page not yet added here.
+  const HIGHLIGHT_CONTEXT_MAP = {
+    // ── No highlight panel (policy/utility pages) ──
+    "404":                                  { header: "none", footer: "none" },
+    "about":                                { header: "none", footer: "none" },
+    "contact":                              { header: "none", footer: "none" },
+    "disclaimer":                           { header: "none", footer: "none" },
+    "privacy":                              { header: "none", footer: "none" },
+    "sitemap":                              { header: "none", footer: "none" },
+    "terms":                                { header: "none", footer: "none" },
+
+    // ── Consulting-flavored project pages ──
+    "service-pricing-guide":                { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+    "saas-development-cost-estimator":      { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+    "website-development-cost-estimator":   { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+
+    // ── Everything else -- sitewide default (broadest fit: IC agreement) ──
+    "freelance-service-pricing-calculator": { header: "lawdepot-ica", footer: "justanswer-business" },
+    "homepage":                             { header: "lawdepot-ica", footer: "justanswer-business" },
+    "project-cost-estimator":               { header: "lawdepot-ica", footer: "justanswer-business" },
+    "recommended-tools":                    { header: "lawdepot-ica", footer: "justanswer-business" },
+    "service-cost-breakdown":               { header: "lawdepot-ica", footer: "justanswer-business" },
+    "service-hourly-rate-calculator":       { header: "lawdepot-ica", footer: "justanswer-business" },
+    "website-maintenance-cost-estimator":   { header: "lawdepot-ica", footer: "justanswer-business" },
+  };
+
+  function renderHighlight(position) {
+    const outer = document.querySelector(
+      position === "header" ? ".header-highlight" : ".footer-highlight"
+    );
+    const slot = document.querySelector(`.highlight-slot[data-highlight-position="${position}"]`);
+    if (!slot) return;
+
+    const page = document.body ? document.body.dataset.highlightPage || "" : "";
+    const variants = HIGHLIGHT_CONTEXT_MAP[page] || HIGHLIGHT_DEFAULT;
+    const variantKey = variants[position] || HIGHLIGHT_DEFAULT[position];
+
+    if (variantKey === "none") {
+      if (outer) outer.style.display = "none";
+      return;
+    }
+
+    fetch("/partials/highlight-content.html")
+      .then((res) => res.text())
+      .then((html) => {
+        const wrap = document.createElement("div");
+        wrap.innerHTML = html;
+        const match = wrap.querySelector(`[data-variant="${variantKey}"]`);
+        if (match) {
+          slot.innerHTML = match.innerHTML;
+          if (outer) outer.removeAttribute("aria-hidden");
+        }
+      })
+      .catch((err) => console.error("Failed to load highlight", err));
+  }
 
   /* ===============================
      Privacy-friendly GA enablement
@@ -77,7 +157,13 @@
 
     // --- Premium lead-value / marketplaces ---
     "toptal":   { partner: "toptal",      category: "talent_marketplace", text: "Toptal (hire vetted talent)" },
-    "upwork":   { partner: "upwork",      category: "talent_marketplace", text: "Upwork (hire freelancers)" }
+    "upwork":   { partner: "upwork",      category: "talent_marketplace", text: "Upwork (hire freelancers)" },
+
+    // --- Highlight panel offers (header/footer only -- see
+    // /partials/highlight-content.html) ---
+    "lawdepot-ica":         { partner: "lawdepot",   category: "legal_documents", text: "LawDepot — Independent Contractor Agreement" },
+    "lawdepot-consulting":  { partner: "lawdepot",   category: "legal_documents", text: "LawDepot — Consulting Agreement" },
+    "justanswer-business":  { partner: "justanswer", category: "legal_advice",    text: "JustAnswer — Ask a Business Lawyer" }
   };
 
   function normalizeGoSlug(href) {

@@ -29,7 +29,7 @@ main.container {
 }
 
 /* ===============================
-   Header (Ad-safe)
+   Header
 ================================ */
 
 .site-header {
@@ -39,10 +39,35 @@ main.container {
   padding: 8px 0;
 }
 
-/* Reserved space for future ads */
-.header-ad-slot {
-  min-height: 0;         /* No ad yet */
+/* Contextual header highlight panel -- content injected by layout.js.
+   min-height:0 keeps the box from reserving tall empty space before the
+   fetch resolves; the small fixed margin here is fine either way since
+   the box has no visible border/fill of its own -- only .__inner does. */
+.header-highlight {
+  min-height: 0;
   width: 100%;
+  margin: 8px 0 4px;
+}
+
+/* Self-contained width/margin -- deliberately NOT reusing .container,
+   since .site-header .container and .site-footer .container carry
+   different margin overrides (see "Header spacing fix" below vs the
+   Footer section) and would otherwise size these boxes inconsistently.
+   background/border reuse the site's existing soft-accent pair (same
+   two colors already used together on .btn-secondary), not new tokens. */
+.header-highlight__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 8px 20px;
+  background-color: #f1f5ff;
+  border: 1px solid #e0e7ff;
+  border-radius: 10px;
+  text-align: center;
 }
 
 /* Header inner */
@@ -874,4 +899,127 @@ tbody tr strong {
 
 #downloadReportForm button {
   margin-top: 10px;
+}
+
+/* ===============================
+   Footer Highlight Panel
+================================ */
+
+/* Contextual footer highlight panel -- content injected by layout.js.
+   Sits as the first child inside <footer>, ahead of .footer-links, so it
+   renders ABOVE the regular footer link rows (mirror image of the header
+   rule: the panel always sits between the site's own structural content
+   and the visitor, never as a banner outside either one). */
+.footer-highlight {
+  width: 100%;
+  margin: 0 0 10px;
+}
+
+/* Self-contained width/margin -- same reasoning as .header-highlight__inner.
+   Same background/border pair as the header version, so the two read as
+   one consistent component. */
+.footer-highlight__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 8px 20px;
+  background-color: #f1f5ff;
+  border: 1px solid #e0e7ff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ===============================
+   Highlight Panel -- Variant Content
+================================ */
+
+/* renderHighlight() (layout.js) copies only the INNER html of the matched
+   .highlight-variant block into .highlight-slot -- so .highlight-text and
+   the chip link end up as direct children of .header-highlight__inner /
+   .footer-highlight__inner themselves. They MUST stay siblings in
+   highlight-content.html, not nested one inside the other: those slots are
+   flex containers and their `gap` only applies BETWEEN flex items -- nest
+   the chip inside the <p> and it becomes one flex item instead of two, and
+   the visible spacing silently collapses. */
+.highlight-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4; /* set explicitly -- don't inherit the global p rule */
+  color: #333;
+}
+
+.shop-mark {
+  font-weight: 600;
+  color: inherit; /* never the brand accent color -- reads as a broken/dead
+                      link otherwise, per shop-pill-chip-playbook §1 */
+}
+
+/* ===============================
+   Shop Chip / Pill
+   Shared link style for the highlight panel and (future) in-body use.
+================================ */
+
+/* Element+class form so this reliably beats other container-scoped `a`
+   rules already on the site (e.g. .footer-links a); !important only on
+   text-decoration, per shop-pill-chip-playbook §2.1. Colors/radius reuse
+   the site's existing tokens (#1a73e8 / #1666c1 / 10px), nothing new
+   introduced. */
+a.shop-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 44px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #1a73e8;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+a.shop-chip:hover {
+  background-color: #1666c1;
+}
+
+/* Compact mid-sentence variant -- not used by the highlight panel today
+   (it always uses the standalone size), included now so the component
+   exists in full per the shop-pill-chip-playbook shape. WCAG 2.5.8 exempts
+   links embedded in running text from the standard 24/44px minimums, so
+   the visible box can shrink to near-text-size; the invisible ::before
+   layer keeps a real tap target on mobile. */
+a.shop-chip.shop-chip--inline {
+  display: inline-block;
+  position: relative;
+  min-height: 0;
+  padding: 1px 7px;
+  margin: 0 1px;
+  font-size: inherit;
+  font-weight: 600;
+  border-radius: 6px;
+  white-space: normal;
+}
+
+a.shop-chip.shop-chip--inline::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -6px;
+  right: -6px;
+  bottom: -12px;
+}
+
+/* Nested inside the chip link itself (not a sibling), so color: inherit
+   picks up the chip's own (bolder) text color automatically. */
+.shop-ext {
+  display: inline-block;
+  opacity: 1;
+  color: inherit;
+  font-size: 0.85em;
 }
