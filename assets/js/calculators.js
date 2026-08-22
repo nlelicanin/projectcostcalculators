@@ -510,13 +510,22 @@
 
     const income = Number(incomeEl.value || 0);
     const overhead = Number(overheadEl.value || 0);
-    const billableHoursPerWeek = Number(hoursEl.value || 0);
+    const workingHoursPerWeek = Number(hoursEl.value || 0);
     const weeksPerYear = Number(weeksEl.value || 0);
     const utilization = Number(utilEl.value || 0);
     const margin = Number(marginEl.value || 0);
 
+    // Prevent invalid working-time inputs from producing a misleading capped rate.
+    if (income < 0 || overhead < 0 || workingHoursPerWeek <= 0 || weeksPerYear <= 0) {
+      resultEl.innerHTML = `
+        <strong>Enter valid planning inputs.</strong>
+        <p style="margin:10px 0 0;">Income and overhead cannot be negative, and working hours/week and working weeks/year must both be greater than 0.</p>
+      `;
+      return;
+    }
+
     // Effective billable hours (utilization reduces realistic billable capacity)
-    const rawBillableHours = billableHoursPerWeek * weeksPerYear;
+    const rawBillableHours = workingHoursPerWeek * weeksPerYear;
     const effectiveBillableHours = rawBillableHours * utilization;
 
     // Guardrails
@@ -547,8 +556,8 @@
     if (utilization <= 0.6) drivers.push("lower utilization");
     if (utilization >= 0.8) drivers.push("higher utilization");
     if (safeMargin >= 0.3) drivers.push("higher profit margin");
-    if (billableHoursPerWeek < 20) drivers.push("lower billable hours");
-    if (billableHoursPerWeek > 30) drivers.push("higher billable hours");
+    if (workingHoursPerWeek < 20) drivers.push("lower weekly working capacity");
+    if (workingHoursPerWeek > 30) drivers.push("higher weekly working capacity");
     if (overhead > income * 0.25) drivers.push("higher overhead");
 
     const driverLine = drivers.length
@@ -648,7 +657,7 @@
       <div id="${breakdownId}" class="calc-breakdown" ${expanded ? "" : 'hidden="hidden"'}>
         <div style="margin:0 0 6px;">
           Base labor: <strong>${fmtSingle(labor)}</strong>
-          <span class="muted">(${hours}h × ${fmtSingle(rate).replace(" – ", "")}/h)</span>
+          <span class="muted">(${hours}h × ${fmtSingle(rate).split(" – ")[0]}/h)</span>
         </div>
         <div style="margin:0 0 6px;">
           Risk buffer (${bufferPct}%): <strong>${fmtSingle(bufferAmount)}</strong>
