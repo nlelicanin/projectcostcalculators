@@ -28,7 +28,7 @@
 
   <meta charset="UTF-8">
   <meta name="application-name" content="Project Cost Calculators">
-  <title>Freelance Service Pricing Calculator — Price Any Project</title>
+  <title>Freelance Services Pricing Calculator — Price Any Project</title>
   <meta name="description"
     content="Free service pricing calculator for freelancers. Enter hours, rate, overhead, and margin to price any project or package instantly. No signup.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,12 +70,14 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#webpage",
-    "name": "Freelance Service Pricing Calculator – Price a Project or Package",
+    "name": "Freelance Services Pricing Calculator — Price Any Project",
     "url": "https://projectcostcalculators.com/freelance-service-pricing-calculator",
     "description": "Estimate a realistic freelance project or package price based on estimated hours, hourly rate, overhead, risk buffer, and profit margin.",
     "inLanguage": "en",
-    "dateModified": "2026-04-12",
+    "dateModified": "2026-08-22",
     "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
+    "author": { "@id": "https://projectcostcalculators.com/#organization" },
+    "publisher": { "@id": "https://projectcostcalculators.com/#organization" },
     "mainEntity": { "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#faq" },
     "about": [
       { "@type": "Thing", "name": "freelance service pricing" },
@@ -115,46 +117,48 @@
 
   <!-- FAQPage (matches visible FAQ below) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#faq",
-    "isPartOf": { "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#webpage" },
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Should I price freelance work hourly or as a fixed project?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Both can work. Hourly is straightforward, while fixed pricing can better capture value and reduce client uncertainty. This calculator helps you translate hours and risk into a realistic fixed price."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a risk buffer and how big should it be?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A risk buffer accounts for unknowns like scope creep, revisions, and blockers. Many freelancers start with 10–25% depending on clarity and stakeholder count."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I include overhead in a project price?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Overhead includes tools, software, insurance, taxes, admin time, and marketing. A simple approach is to add a per-project overhead allocation based on how much of your yearly overhead this project should cover. For a deeper explanation of what actually drives pricing, see the Service Cost Breakdown."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you store any data I enter?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. All calculations run locally in your browser and no inputs are stored or transmitted."
-        }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#faq",
+  "isPartOf": {
+    "@id": "https://projectcostcalculators.com/freelance-service-pricing-calculator#webpage"
+  },
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I price freelance work hourly or as a fixed project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both can work. Hourly is straightforward, while fixed pricing can better capture value and reduce client uncertainty. This calculator helps you translate hours and risk into a realistic fixed price."
       }
-    ]
-  }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a risk buffer and how big should it be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A risk buffer accounts for unknowns like scope creep, revisions, and blockers. Many freelancers start with 10–25% depending on clarity and stakeholder count."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I include overhead in a project price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Overhead includes tools, software, insurance, taxes, admin time, and marketing. A simple approach is to add a per-project overhead allocation based on how much of your yearly overhead this project should cover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you store any data I enter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All calculations run locally in your browser and no inputs are stored or transmitted."
+      }
+    }
+  ]
+}
   </script>
 
 </head>
@@ -242,11 +246,10 @@
         This tool converts hours into a fixed price, then adds uncertainty, overhead, and margin:
       </p>
       <p>
-        <strong>Price ≈ (Hours × Rate) × (1 + Risk buffer) + Overhead</strong>
+        <strong>Cost base = (Hours × Rate) × (1 + Risk buffer) + Overhead</strong>
       </p>
       <p>
-        Then it applies your <strong>profit margin target</strong> so the final number supports growth and non-billable
-        time.
+        <strong>Target price = Cost base ÷ (1 − Profit margin)</strong>. The displayed range is rounded around that target.
       </p>
       <table>
         <thead>

@@ -74,8 +74,10 @@
     "url": "https://projectcostcalculators.com/service-hourly-rate-calculator",
     "description": "Estimate a realistic hourly rate range based on target annual income, overhead, utilization, and profit margin.",
     "inLanguage": "en",
-    "dateModified": "2026-04-12",
+    "dateModified": "2026-08-22",
     "isPartOf": { "@id": "https://projectcostcalculators.com/#website" },
+    "author": { "@id": "https://projectcostcalculators.com/#organization" },
+    "publisher": { "@id": "https://projectcostcalculators.com/#organization" },
     "mainEntity": { "@id": "https://projectcostcalculators.com/service-hourly-rate-calculator#faq" },
     "about": [
       { "@type": "Thing", "name": "hourly rate calculator" },
@@ -106,7 +108,7 @@
     "description": "Steps to set a profitable hourly rate using the Service Hourly Rate Calculator.",
     "step": [
       { "@type": "HowToStep", "text": "Enter your target annual income and annual business overhead." },
-      { "@type": "HowToStep", "text": "Set your billable hours per week, working weeks per year, and utilization rate." },
+      { "@type": "HowToStep", "text": "Set your working hours per week, working weeks per year, and utilization rate." },
       { "@type": "HowToStep", "text": "Choose a profit margin target." },
       { "@type": "HowToStep", "text": "Review the hourly rate range and adjust inputs until it matches your goals." }
     ]
@@ -126,7 +128,7 @@
         "name": "How do I calculate the hourly rate I should charge?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A practical hourly rate covers your income goal plus overhead, then adds a profit margin, divided by realistic billable hours (after utilization). This calculator estimates that range. To translate hourly rates into full project budgets, use the Project Cost Estimator."
+          "text": "A practical hourly rate covers income plus overhead, grosses up for profit margin, then divides by billable hours after utilization. This calculator estimates that range. For project budgets, use the Project Cost Estimator."
         }
       },
       {
@@ -197,7 +199,7 @@
       </label>
 
       <label>
-        Billable hours per week
+        Working hours per week (before utilization)
         <input id="hrBillableHours" type="number" inputmode="decimal" min="0" step="1" value="25"
           aria-describedby="hr-hint">
       </label>
@@ -244,7 +246,7 @@
         A practical hourly rate starts with your required annual revenue, then divides it by realistic billable hours:
       </p>
       <p>
-        <strong>Hourly rate ≈ (Income goal + Overhead) ÷ (Billable hours per year × Utilization) × (1 + Profit
+        <strong>Hourly rate ≈ (Income goal + Overhead) ÷ (Working hours per year × Utilization) ÷ (1 − Profit
           margin)</strong>
       </p>
       <p class="hint">
@@ -357,7 +359,7 @@
       <p>
         This calculator covers your income goal + yearly overhead, then applies a profit margin and divides by realistic
         billable hours.
-        The biggest drivers are utilization and weekly billable capacity.
+        The biggest drivers are utilization and weekly working capacity.
       </p>
       <p class="hub-link">
         Estimating a full project too? Try the
@@ -415,14 +417,12 @@
 
       <h3>How do I calculate the hourly rate I should charge?</h3>
       <p>
-        A practical hourly rate covers your income goal plus overhead, then adds a profit margin, divided by realistic
-        billable hours
-        (after utilization). This calculator estimates that range.
+        A practical hourly rate covers income plus overhead, grosses up for profit margin, then divides by billable
+        hours after utilization. This calculator estimates that range.
       </p>
 
       <p>
-        To translate hourly rates into full project budgets, use the
-        <a href="/project-cost-estimator">Project Cost Estimator</a>.
+        For project budgets, use the <a href="/project-cost-estimator">Project Cost Estimator</a>.
       </p>
 
       <h3>What is utilization and why does it matter?</h3>
