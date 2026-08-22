@@ -811,6 +811,266 @@
 
 
   /* ===============================
+     Website Redesign Cost Calculator
+     Page: /website-redesign-cost-calculator
+  ================================ */
+
+  CostTools.calculateWebsiteRedesignCost = function () {
+    const depthEl = document.getElementById("wrDepth");
+    const pagesEl = document.getElementById("wrPages");
+    const migrationEl = document.getElementById("wrMigration");
+    const contentEl = document.getElementById("wrContent");
+    const seoEl = document.getElementById("wrSeo");
+    const integrationsEl = document.getElementById("wrIntegrations");
+    const urgencyEl = document.getElementById("wrUrgency");
+    const providerEl = document.getElementById("wrProvider");
+    const resultEl = document.getElementById("websiteRedesignResult");
+
+    if (!depthEl || !pagesEl || !migrationEl || !contentEl || !seoEl || !integrationsEl || !urgencyEl || !providerEl || !resultEl) return;
+
+    const BASE_RANGES = {
+      refresh: { min: 2500, max: 8000 },
+      business: { min: 6000, max: 18000 },
+      rebuild: { min: 12000, max: 40000 },
+      ecommerce: { min: 20000, max: 70000 }
+    };
+    const PAGE_MULT = { "1_5": 0.8, "6_15": 1.0, "16_40": 1.25, "40_plus": 1.6 };
+    const MIGRATION_MULT = { same: 1.0, cms: 1.15, major: 1.35 };
+    const CONTENT_MULT = { reuse: 0.9, light: 1.0, rewrite: 1.2 };
+    const SEO_MULT = { basic: 0.95, preserve: 1.1, complex: 1.25 };
+    const INTEGRATION_MULT = { none: 0.95, some: 1.1, many: 1.3 };
+    const URGENCY_MULT = { flexible: 1.0, standard: 1.12, rush: 1.3 };
+    const PROVIDER_MULT = { freelancer: 0.85, smallAgency: 1.0, agency: 1.25 };
+
+    const base = BASE_RANGES[depthEl.value] || BASE_RANGES.business;
+    let estMin = Math.round(base.min * (PAGE_MULT[pagesEl.value] ?? 1) * (MIGRATION_MULT[migrationEl.value] ?? 1) * (CONTENT_MULT[contentEl.value] ?? 1) * (SEO_MULT[seoEl.value] ?? 1) * (INTEGRATION_MULT[integrationsEl.value] ?? 1) * (URGENCY_MULT[urgencyEl.value] ?? 1) * (PROVIDER_MULT[providerEl.value] ?? 1));
+    let estMax = Math.round(base.max * (PAGE_MULT[pagesEl.value] ?? 1) * (MIGRATION_MULT[migrationEl.value] ?? 1) * (CONTENT_MULT[contentEl.value] ?? 1) * (SEO_MULT[seoEl.value] ?? 1) * (INTEGRATION_MULT[integrationsEl.value] ?? 1) * (URGENCY_MULT[urgencyEl.value] ?? 1) * (PROVIDER_MULT[providerEl.value] ?? 1));
+
+    estMin = CostTools.clamp(estMin, 0, 5_000_000);
+    estMax = CostTools.clamp(estMax, 0, 5_000_000);
+    if (estMax < estMin) [estMin, estMax] = [estMax, estMin];
+
+    const drivers = [];
+    if (migrationEl.value !== "same") drivers.push("platform migration");
+    if (contentEl.value === "rewrite") drivers.push("substantial content work");
+    if (seoEl.value === "preserve") drivers.push("SEO preservation and redirects");
+    if (seoEl.value === "complex") drivers.push("complex SEO/URL migration");
+    if (integrationsEl.value === "many") drivers.push("integration-heavy scope");
+    if (urgencyEl.value === "rush") drivers.push("rush timeline");
+    if (providerEl.value === "agency") drivers.push("full-service agency delivery");
+
+    resultEl.innerHTML = `
+      <strong>Estimated website redesign cost range:</strong><br>
+      <span style="font-size:1.15rem; font-weight:800;">${CostTools.formatCurrencyRangeUSD(estMin, estMax)}</span>
+      <p style="margin:10px 0 0;">${drivers.length ? `Key cost drivers: <strong>${drivers.join(", ")}</strong>.` : "This configuration keeps migration and redesign complexity relatively contained."}</p>
+      <p style="margin:10px 0 0;">New site rather than a redesign? Use the <a href="/website-development-cost-estimator">Website Development Cost Estimator</a>.</p>
+    `;
+  };
+
+  /* ===============================
+     Ecommerce Website Cost Calculator
+     Page: /ecommerce-website-cost-calculator
+  ================================ */
+
+  CostTools.calculateEcommerceWebsiteCost = function () {
+    const platformEl = document.getElementById("ecPlatform");
+    const catalogEl = document.getElementById("ecCatalog");
+    const designEl = document.getElementById("ecDesign");
+    const integrationsEl = document.getElementById("ecIntegrations");
+    const migrationEl = document.getElementById("ecMigration");
+    const internationalEl = document.getElementById("ecInternational");
+    const providerEl = document.getElementById("ecProvider");
+    const resultEl = document.getElementById("ecommerceCostResult");
+    if (!platformEl || !catalogEl || !designEl || !integrationsEl || !migrationEl || !internationalEl || !providerEl || !resultEl) return;
+
+    const BASE_RANGES = {
+      hostedTemplate: { min: 1500, max: 6000 },
+      hostedCustom: { min: 6000, max: 25000 },
+      openSource: { min: 10000, max: 40000 },
+      headless: { min: 30000, max: 120000 }
+    };
+    const CATALOG_MULT = { small: 0.9, medium: 1.0, large: 1.2, veryLarge: 1.5 };
+    const DESIGN_MULT = { template: 0.85, custom: 1.0, advanced: 1.3 };
+    const INTEGRATION_MULT = { basic: 0.95, some: 1.15, many: 1.4 };
+    const MIGRATION_MULT = { none: 0.9, standard: 1.1, complex: 1.3 };
+    const INTERNATIONAL_MULT = { single: 1.0, multi: 1.2 };
+    const PROVIDER_MULT = { freelancer: 0.85, smallAgency: 1.0, agency: 1.25 };
+
+    const base = BASE_RANGES[platformEl.value] || BASE_RANGES.hostedCustom;
+    let estMin = Math.round(base.min * (CATALOG_MULT[catalogEl.value] ?? 1) * (DESIGN_MULT[designEl.value] ?? 1) * (INTEGRATION_MULT[integrationsEl.value] ?? 1) * (MIGRATION_MULT[migrationEl.value] ?? 1) * (INTERNATIONAL_MULT[internationalEl.value] ?? 1) * (PROVIDER_MULT[providerEl.value] ?? 1));
+    let estMax = Math.round(base.max * (CATALOG_MULT[catalogEl.value] ?? 1) * (DESIGN_MULT[designEl.value] ?? 1) * (INTEGRATION_MULT[integrationsEl.value] ?? 1) * (MIGRATION_MULT[migrationEl.value] ?? 1) * (INTERNATIONAL_MULT[internationalEl.value] ?? 1) * (PROVIDER_MULT[providerEl.value] ?? 1));
+    estMin = CostTools.clamp(estMin, 0, 5_000_000);
+    estMax = CostTools.clamp(estMax, 0, 5_000_000);
+    if (estMax < estMin) [estMin, estMax] = [estMax, estMin];
+
+    const drivers = [];
+    if (catalogEl.value === "large" || catalogEl.value === "veryLarge") drivers.push("larger catalog");
+    if (designEl.value === "advanced") drivers.push("advanced storefront UX");
+    if (integrationsEl.value === "many") drivers.push("complex integrations");
+    if (migrationEl.value === "complex") drivers.push("complex data migration");
+    if (internationalEl.value === "multi") drivers.push("international or multi-store requirements");
+    if (platformEl.value === "headless") drivers.push("headless/custom architecture");
+
+    resultEl.innerHTML = `
+      <strong>Estimated ecommerce website build cost:</strong><br>
+      <span style="font-size:1.15rem; font-weight:800;">${CostTools.formatCurrencyRangeUSD(estMin, estMax)}</span>
+      <p style="margin:10px 0 0;">${drivers.length ? `Key cost drivers: <strong>${drivers.join(", ")}</strong>.` : "This configuration represents a relatively standard commerce implementation."}</p>
+      <p style="margin:10px 0 0;">Recurring platform, payment, app, hosting, and maintenance costs are <strong>not included</strong>.</p>
+    `;
+  };
+
+  /* ===============================
+     Software Development Cost Calculator
+     Page: /software-development-cost-calculator
+  ================================ */
+
+  CostTools.calculateSoftwareDevelopmentCost = function () {
+    const typeEl = document.getElementById("swType");
+    const modulesEl = document.getElementById("swModules");
+    const complexityEl = document.getElementById("swComplexity");
+    const integrationsEl = document.getElementById("swIntegrations");
+    const migrationEl = document.getElementById("swMigration");
+    const complianceEl = document.getElementById("swCompliance");
+    const urgencyEl = document.getElementById("swUrgency");
+    const providerEl = document.getElementById("swProvider");
+    const resultEl = document.getElementById("softwareCostResult");
+    if (!typeEl || !modulesEl || !complexityEl || !integrationsEl || !migrationEl || !complianceEl || !urgencyEl || !providerEl || !resultEl) return;
+
+    const BASE_RANGES = {
+      internal: { min: 15000, max: 45000 },
+      business: { min: 35000, max: 120000 },
+      portal: { min: 45000, max: 150000 },
+      enterprise: { min: 100000, max: 350000 }
+    };
+    const MODULE_MULT = { few: 0.85, several: 1.0, many: 1.3 };
+    const COMPLEXITY_MULT = { low: 0.8, medium: 1.0, high: 1.4 };
+    const INTEGRATION_MULT = { basic: 0.9, some: 1.1, many: 1.4 };
+    const MIGRATION_MULT = { none: 0.9, standard: 1.05, complex: 1.25 };
+    const COMPLIANCE_MULT = { standard: 1.0, enhanced: 1.15, regulated: 1.35 };
+    const URGENCY_MULT = { flexible: 1.0, standard: 1.12, rush: 1.3 };
+    const PROVIDER_MULT = { freelancer: 0.85, smallAgency: 1.0, agency: 1.25 };
+
+    const base = BASE_RANGES[typeEl.value] || BASE_RANGES.business;
+    let estMin = Math.round(base.min * (MODULE_MULT[modulesEl.value] ?? 1) * (COMPLEXITY_MULT[complexityEl.value] ?? 1) * (INTEGRATION_MULT[integrationsEl.value] ?? 1) * (MIGRATION_MULT[migrationEl.value] ?? 1) * (COMPLIANCE_MULT[complianceEl.value] ?? 1) * (URGENCY_MULT[urgencyEl.value] ?? 1) * (PROVIDER_MULT[providerEl.value] ?? 1));
+    let estMax = Math.round(base.max * (MODULE_MULT[modulesEl.value] ?? 1) * (COMPLEXITY_MULT[complexityEl.value] ?? 1) * (INTEGRATION_MULT[integrationsEl.value] ?? 1) * (MIGRATION_MULT[migrationEl.value] ?? 1) * (COMPLIANCE_MULT[complianceEl.value] ?? 1) * (URGENCY_MULT[urgencyEl.value] ?? 1) * (PROVIDER_MULT[providerEl.value] ?? 1));
+    estMin = CostTools.clamp(estMin, 0, 10_000_000);
+    estMax = CostTools.clamp(estMax, 0, 10_000_000);
+    if (estMax < estMin) [estMin, estMax] = [estMax, estMin];
+
+    const drivers = [];
+    if (modulesEl.value === "many") drivers.push("broad module scope");
+    if (complexityEl.value === "high") drivers.push("high technical complexity");
+    if (integrationsEl.value === "many") drivers.push("integration-heavy architecture");
+    if (migrationEl.value === "complex") drivers.push("complex legacy-data migration");
+    if (complianceEl.value === "regulated") drivers.push("regulated/audit-heavy requirements");
+    if (urgencyEl.value === "rush") drivers.push("rush delivery");
+
+    resultEl.innerHTML = `
+      <strong>Estimated custom software development cost:</strong><br>
+      <span style="font-size:1.15rem; font-weight:800;">${CostTools.formatCurrencyRangeUSD(estMin, estMax)}</span>
+      <p style="margin:10px 0 0;">${drivers.length ? `Key cost drivers: <strong>${drivers.join(", ")}</strong>.` : "This configuration represents a mid-scope custom business application."}</p>
+      <p style="margin:10px 0 0;">Building a SaaS product, mobile app, or ordinary website? Use the dedicated calculator linked below for a more specific model.</p>
+    `;
+  };
+
+  /* ===============================
+     Project Estimate Template / Builder
+     Page: /project-estimate-template
+  ================================ */
+
+  CostTools.calculateProjectEstimateTemplate = function () {
+    const hoursEl = document.getElementById("peHours");
+    const rateEl = document.getElementById("peRate");
+    const materialsEl = document.getElementById("peMaterials");
+    const subcontractorsEl = document.getElementById("peSubcontractors");
+    const overheadEl = document.getElementById("peOverhead");
+    const contingencyEl = document.getElementById("peContingency");
+    const marginEl = document.getElementById("peMargin");
+    const resultEl = document.getElementById("projectEstimateResult");
+    if (!hoursEl || !rateEl || !materialsEl || !subcontractorsEl || !overheadEl || !contingencyEl || !marginEl || !resultEl) return null;
+
+    const hours = Math.max(0, Number(hoursEl.value || 0));
+    const rate = Math.max(0, Number(rateEl.value || 0));
+    const materials = Math.max(0, Number(materialsEl.value || 0));
+    const subcontractors = Math.max(0, Number(subcontractorsEl.value || 0));
+    const overhead = Math.max(0, Number(overheadEl.value || 0));
+    const contingencyPct = CostTools.clamp(Number(contingencyEl.value || 0), 0, 0.9);
+    const marginPct = CostTools.clamp(Number(marginEl.value || 0), 0, 0.9);
+
+    const labor = hours * rate;
+    const baseCost = labor + materials + subcontractors + overhead;
+    const contingency = baseCost * contingencyPct;
+    const costWithContingency = baseCost + contingency;
+    const clientEstimate = costWithContingency / Math.max(0.1, (1 - marginPct));
+    const profit = clientEstimate - costWithContingency;
+    const fmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+
+    resultEl.innerHTML = `
+      <strong>Project estimate:</strong><br>
+      <span style="font-size:1.15rem; font-weight:800;">${fmt.format(clientEstimate)}</span>
+      <div class="calc-breakdown">
+        <p><strong>Labor:</strong> ${fmt.format(labor)} (${hours.toLocaleString("en-US")} hrs × ${fmt.format(rate)})</p>
+        <p><strong>Direct expenses:</strong> ${fmt.format(materials)}</p>
+        <p><strong>Subcontractors:</strong> ${fmt.format(subcontractors)}</p>
+        <p><strong>Overhead allocation:</strong> ${fmt.format(overhead)}</p>
+        <p><strong>Contingency:</strong> ${fmt.format(contingency)} (${Math.round(contingencyPct * 100)}%)</p>
+        <p><strong>Profit:</strong> ${fmt.format(profit)} (${Math.round(marginPct * 100)}% target margin)</p>
+      </div>
+      <p style="margin:10px 0 0;">Taxes, discounts, payment schedules, and contract terms are not included.</p>
+    `;
+
+    return { hours, rate, labor, materials, subcontractors, overhead, contingencyPct, contingency, marginPct, profit, clientEstimate };
+  };
+
+  CostTools.downloadProjectEstimateCsv = function (blank) {
+    const projectNameEl = document.getElementById("peProjectName");
+    const data = CostTools.calculateProjectEstimateTemplate();
+    if (!blank && !data) return;
+
+    const esc = (value) => `"${String(value ?? "").replace(/"/g, '""')}"`;
+    let rows;
+    if (blank) {
+      rows = [
+        ["Project Estimate Template"],
+        ["Project", ""],
+        ["Category", "Description", "Quantity", "Unit Rate", "Amount"],
+        ["Labor", "", "", "", ""],
+        ["Direct expenses", "", "", "", ""],
+        ["Subcontractors", "", "", "", ""],
+        ["Overhead", "", "", "", ""],
+        ["Contingency", "", "", "", ""],
+        ["Profit", "", "", "", ""],
+        ["Total estimate", "", "", "", ""]
+      ];
+    } else {
+      const projectName = (projectNameEl?.value || "Client project").trim() || "Client project";
+      rows = [
+        ["Project Estimate"],
+        ["Project", projectName],
+        ["Category", "Description", "Quantity", "Unit Rate", "Amount"],
+        ["Labor", "Estimated labor", data.hours, data.rate.toFixed(2), data.labor.toFixed(2)],
+        ["Direct expenses", "Materials / project expenses", "", "", data.materials.toFixed(2)],
+        ["Subcontractors", "Outside services", "", "", data.subcontractors.toFixed(2)],
+        ["Overhead", "Project overhead allocation", "", "", data.overhead.toFixed(2)],
+        ["Contingency", `${Math.round(data.contingencyPct * 100)}% of cost base`, "", "", data.contingency.toFixed(2)],
+        ["Profit", `${Math.round(data.marginPct * 100)}% target margin`, "", "", data.profit.toFixed(2)],
+        ["Total estimate", "USD", "", "", data.clientEstimate.toFixed(2)]
+      ];
+    }
+
+    const csv = rows.map((row) => row.map(esc).join(",")).join("\r\n");
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = blank ? "project-estimate-template.csv" : "project-estimate.csv";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  /* ===============================
      Event Bindings (tool-aware)
   ================================ */
 
@@ -910,6 +1170,57 @@
         break;
       }
       
+
+      case "website-redesign-cost-calculator": {
+        const ids = ["wrDepth", "wrPages", "wrMigration", "wrContent", "wrSeo", "wrIntegrations", "wrUrgency", "wrProvider"];
+        const els = ids.map((id) => document.getElementById(id));
+        if (els.every(Boolean)) {
+          const handler = () => CostTools.calculateWebsiteRedesignCost();
+          els.forEach((el) => el.addEventListener("change", handler));
+          handler();
+        }
+        break;
+      }
+
+      case "ecommerce-website-cost-calculator": {
+        const ids = ["ecPlatform", "ecCatalog", "ecDesign", "ecIntegrations", "ecMigration", "ecInternational", "ecProvider"];
+        const els = ids.map((id) => document.getElementById(id));
+        if (els.every(Boolean)) {
+          const handler = () => CostTools.calculateEcommerceWebsiteCost();
+          els.forEach((el) => el.addEventListener("change", handler));
+          handler();
+        }
+        break;
+      }
+
+      case "software-development-cost-calculator": {
+        const ids = ["swType", "swModules", "swComplexity", "swIntegrations", "swMigration", "swCompliance", "swUrgency", "swProvider"];
+        const els = ids.map((id) => document.getElementById(id));
+        if (els.every(Boolean)) {
+          const handler = () => CostTools.calculateSoftwareDevelopmentCost();
+          els.forEach((el) => el.addEventListener("change", handler));
+          handler();
+        }
+        break;
+      }
+
+      case "project-estimate-template": {
+        const ids = ["peHours", "peRate", "peMaterials", "peSubcontractors", "peOverhead", "peContingency", "peMargin"];
+        const els = ids.map((id) => document.getElementById(id));
+        if (els.every(Boolean)) {
+          const handler = () => CostTools.calculateProjectEstimateTemplate();
+          els.forEach((el) => {
+            el.addEventListener("change", handler);
+            el.addEventListener("input", handler);
+          });
+          const filledBtn = document.getElementById("peDownloadFilled");
+          const blankBtn = document.getElementById("peDownloadBlank");
+          if (filledBtn) filledBtn.addEventListener("click", () => CostTools.downloadProjectEstimateCsv(false));
+          if (blankBtn) blankBtn.addEventListener("click", () => CostTools.downloadProjectEstimateCsv(true));
+          handler();
+        }
+        break;
+      }
 
       default:
         // No calculator on this page yet

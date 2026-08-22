@@ -55,7 +55,7 @@
 
   const HIGHLIGHT_DEFAULT = { header: "lawdepot-ica", footer: "justanswer-business" };
 
-  // Every page from html-files.txt listed explicitly (17 total), even the
+  // Every page from html-files.txt listed explicitly (22 total), even the
   // ones using the plain default for both slots -- so any single page's
   // pitch can be hand-edited later without needing to understand the
   // fallback mechanism. HIGHLIGHT_DEFAULT still exists as a safety net for
@@ -75,6 +75,9 @@
     "saas-development-cost-estimator":       { header: "lawdepot-consulting", footer: "lawdepot-ica" },
     "website-development-cost-estimator":    { header: "lawdepot-consulting", footer: "lawdepot-ica" },
     "mobile-app-development-cost-estimator": { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+    "website-redesign-cost-calculator":     { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+    "ecommerce-website-cost-calculator":    { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+    "software-development-cost-calculator": { header: "lawdepot-consulting", footer: "lawdepot-ica" },
 
     // ── Everything else -- sitewide default (broadest fit: IC agreement) ──
     "freelance-service-pricing-calculator": { header: "lawdepot-ica", footer: "justanswer-business" },
@@ -83,6 +86,7 @@
     "recommended-tools":                    { header: "lawdepot-ica", footer: "justanswer-business" },
     "service-cost-breakdown":               { header: "lawdepot-ica", footer: "justanswer-business" },
     "service-hourly-rate-calculator":       { header: "lawdepot-ica", footer: "justanswer-business" },
+    "project-estimate-template":            { header: "lawdepot-ica", footer: "justanswer-business" },
     "website-maintenance-cost-estimator":   { header: "lawdepot-ica", footer: "justanswer-business" },
   };
 
