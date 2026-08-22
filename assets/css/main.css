@@ -1025,3 +1025,43 @@ a.shop-chip.shop-chip--inline::before {
   color: inherit;
   font-size: 0.85em;
 }
+/* Dense variant — used as an ADDITIONAL class alongside .hub-link,
+   e.g. <div class="hub-link hub-link--dense">. Every rule here is
+   scoped as a descendant of .hub-link--dense specifically, so it can
+   never affect the existing single-line .hub-link paragraphs used
+   elsewhere on the site. Intended for the long "More from
+   ProjectCostCalculators.com" link list on legal/utility pages, to
+   de-emphasize it relative to the page's actual content without
+   hiding it. Same visual language as the FreelancePricing.com,
+   WoodworkingTraining.com, and other sister sites; hover color here
+   uses this site's own accent blue (#1a73e8) rather than importing
+   another site's brand color. */
+
+.hub-link--dense {
+  margin: 14px 0 20px;
+}
+
+.hub-link--dense .hub-link__label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin: 0 0 4px;
+}
+
+.hub-link--dense p:not(.hub-link__label) {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.hub-link--dense a {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.hub-link--dense a:hover {
+  color: #1a73e8;
+  text-decoration: underline;
+}
