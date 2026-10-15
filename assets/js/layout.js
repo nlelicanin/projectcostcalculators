@@ -71,7 +71,7 @@
     "terms":                                { header: "none", footer: "none" },
 
     // ── Consulting-flavored project pages ──
-    "service-pricing-guide":                 { header: "lawdepot-consulting", footer: "lawdepot-ica" },
+    "service-pricing-guide":                 { header: "businessanywhere", footer: "lawdepot-ica" },
     "saas-development-cost-estimator":       { header: "lawdepot-consulting", footer: "lawdepot-ica" },
     "website-development-cost-estimator":    { header: "lawdepot-consulting", footer: "lawdepot-ica" },
     "mobile-app-development-cost-estimator": { header: "lawdepot-consulting", footer: "lawdepot-ica" },
@@ -80,13 +80,13 @@
     "software-development-cost-calculator": { header: "lawdepot-consulting", footer: "lawdepot-ica" },
 
     // ── Everything else -- sitewide default (broadest fit: IC agreement) ──
-    "freelance-service-pricing-calculator": { header: "lawdepot-ica", footer: "justanswer-business" },
+    "freelance-service-pricing-calculator": { header: "businessanywhere", footer: "justanswer-business" },
     "homepage":                             { header: "lawdepot-ica", footer: "justanswer-business" },
-    "project-cost-estimator":               { header: "lawdepot-ica", footer: "justanswer-business" },
-    "recommended-tools":                    { header: "lawdepot-ica", footer: "justanswer-business" },
+    "project-cost-estimator":               { header: "businessanywhere", footer: "justanswer-business" },
+    "recommended-tools":                    { header: "businessanywhere", footer: "justanswer-business" },
     "service-cost-breakdown":               { header: "lawdepot-ica", footer: "justanswer-business" },
-    "service-hourly-rate-calculator":       { header: "lawdepot-ica", footer: "justanswer-business" },
-    "project-estimate-template":            { header: "lawdepot-ica", footer: "justanswer-business" },
+    "service-hourly-rate-calculator":       { header: "businessanywhere", footer: "justanswer-business" },
+    "project-estimate-template":            { header: "businessanywhere", footer: "justanswer-business" },
     "website-maintenance-cost-estimator":   { header: "lawdepot-ica", footer: "justanswer-business" },
   };
 
@@ -170,7 +170,8 @@
     // --- Highlight panel offers
     "lawdepot-ica":         { partner: "lawdepot",   category: "legal_documents", text: "LawDepot — Independent Contractor Agreement" },
     "lawdepot-consulting":  { partner: "lawdepot",   category: "legal_documents", text: "LawDepot — Consulting Agreement" },
-    "justanswer-business":  { partner: "justanswer", category: "legal_advice",    text: "JustAnswer — Ask a Business Lawyer" }
+    "justanswer-business":  { partner: "justanswer", category: "legal_advice",    text: "JustAnswer — Ask a Business Lawyer" },
+    "businessanywhere":     { partner: "businessanywhere",  category: "business_startup", text: "Business Anywhere" }
   };
 
   function normalizeGoSlug(href) {
